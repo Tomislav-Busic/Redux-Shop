@@ -10,7 +10,7 @@ export const Header = () => {
         <Navbar.Brand href="#home">Shop Redux</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/">
-            Home
+            Categories
           </Nav.Link>
           <Nav.Link as={Link} to="/products">
             Products

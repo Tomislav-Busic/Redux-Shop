@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 import { productsActions } from "./store/slice/products-slice";
 import { categoriesAction } from "./store/slice/categories-slice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Home } from "./pages/Home";
 import { Header } from "./Components/Header";
@@ -13,6 +13,7 @@ import { Cart } from "./pages/Cart";
 
 function App() {
   const dispatch = useDispatch();
+  const id = useSelector((state) => state.products.categoryId);
 
   const fetchCategories = async () => {
     const response = await axios
@@ -32,9 +33,22 @@ function App() {
     dispatch(productsActions.showProducts(response.data));
   };
 
+  const fetchAllProductsById = async () => {
+    const response = await axios
+      .get(`https://api.escuelajs.co/api/v1/categories/${id}/products`)
+      .catch((err) => {
+        console.log(err);
+      });
+    dispatch(productsActions.showProducts(response.data));
+  };
+
   useEffect(() => {
-    fetchAllProducts();
+    fetchAllProductsById();
+  }, [id]);
+
+  useEffect(() => {
     fetchCategories();
+    fetchAllProducts();
   }, []);
 
   return (
