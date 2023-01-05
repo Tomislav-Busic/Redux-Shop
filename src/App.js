@@ -14,10 +14,11 @@ import { Cart } from "./pages/Cart";
 function App() {
   const dispatch = useDispatch();
   const id = useSelector((state) => state.products.categoryId);
+  const showAll = useSelector((state) => state.products.showAll);
 
   const fetchCategories = async () => {
     const response = await axios
-      .get("https://api.escuelajs.co/api/v1/categories")
+      .get("https://api.escuelajs.co/api/v1/categories/?limit=6")
       .catch((err) => {
         console.log(err);
       });
@@ -43,13 +44,13 @@ function App() {
   };
 
   useEffect(() => {
-    fetchAllProductsById();
-  }, [id]);
-
-  useEffect(() => {
     fetchCategories();
     fetchAllProducts();
   }, []);
+
+  useEffect(() => {
+    fetchAllProductsById();
+  }, [id]);
 
   return (
     <Router>

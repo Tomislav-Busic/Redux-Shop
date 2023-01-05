@@ -13,6 +13,13 @@ export const productsSlice = createSlice({
     showProductsByCategory(state, action) {
       state.categoryId = action.payload;
     },
+    searchByName(state, action) {
+      state.productsList = state.productsList.filter(
+        (product) =>
+          product.title.toLowerCase().includes(action.payload) ||
+          product.title.includes(action.payload)
+      );
+    },
     sortProductsByHigherPrice(state, action) {
       const products = [...state.productsList];
       let value = action.payload;
