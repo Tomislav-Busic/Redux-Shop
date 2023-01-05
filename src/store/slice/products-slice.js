@@ -9,6 +9,11 @@ export const productsSlice = createSlice({
     showProducts(state, action) {
       state.productsList = action.payload;
     },
+    showProductsByCategory(state, action) {
+      state.productsList = state.productsList.filter(
+        (product) => product.category.id === action.payload
+      );
+    },
   },
 });
 

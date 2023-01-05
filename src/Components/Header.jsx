@@ -12,6 +12,9 @@ export const Header = () => {
           <Nav.Link as={Link} to="/">
             Home
           </Nav.Link>
+          <Nav.Link as={Link} to="/products">
+            Products
+          </Nav.Link>
           <Nav.Link as={Link} to="/cart">
             Cart
           </Nav.Link>

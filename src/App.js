@@ -1,15 +1,48 @@
+import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import axios from "axios";
+import { productsActions } from "./store/slice/products-slice";
+import { categoriesAction } from "./store/slice/categories-slice";
+import { useDispatch } from "react-redux";
+
 import { Home } from "./pages/Home";
 import { Header } from "./Components/Header";
+import { Products } from "./pages/Products";
 import { Cart } from "./pages/Cart";
 
 function App() {
+  const dispatch = useDispatch();
+
+  const fetchCategories = async () => {
+    const response = await axios
+      .get("https://api.escuelajs.co/api/v1/categories")
+      .catch((err) => {
+        console.log(err);
+      });
+    dispatch(categoriesAction.showCategories(response.data));
+  };
+
+  const fetchAllProducts = async () => {
+    const response = await axios
+      .get("https://api.escuelajs.co/api/v1/products")
+      .catch((err) => {
+        console.log(err);
+      });
+    dispatch(productsActions.showProducts(response.data));
+  };
+
+  useEffect(() => {
+    fetchAllProducts();
+    fetchCategories();
+  }, []);
+
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         <Route
           path="*"
