@@ -23,7 +23,7 @@ const Filters = () => {
     <div className="filters">
       <div className="cards">
         {categoryOptions.map((option) => (
-          <CatOption option={option} />
+          <CatOption option={option} key={option.id} />
         ))}
       </div>
       <InputGroup className="mb-3">
@@ -36,7 +36,7 @@ const Filters = () => {
       </InputGroup>
       <br />
       <Form.Select onChange={(e) => handlePrice(e.target.value)}>
-        <option>Filter by price</option>
+        <option value="all">Filter by price</option>
         <option value="lower">Lower price</option>
         <option value="higher">Higher price</option>
       </Form.Select>

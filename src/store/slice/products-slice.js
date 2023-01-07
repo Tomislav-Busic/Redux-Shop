@@ -18,16 +18,13 @@ export const productsSlice = createSlice({
       state.productName = action.payload;
     },
     sortProductsByHigherPrice(state, action) {
-      const products = [...state.productsList];
-      let value = action.payload;
-
-      if (value === "higher") {
-        return products.sort((a, b) => b.price - a.price);
-      } else if (value === "lower") {
-        return products.sort((a, b) => a.price - b.price);
-      } else {
-        return products;
-      }
+       state.productsList.sort((a, b) => {
+         if (action.payload === "higher") {
+           return b.price - a.price;
+         } else if (action.payload === "lower") {
+           return a.price - b.price;
+         }
+       });
     },
   },
 });

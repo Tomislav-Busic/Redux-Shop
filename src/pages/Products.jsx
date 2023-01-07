@@ -1,7 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Filters from "../Components/Filters";
 import { Product } from "./../Components/Product";
+import { productsActions } from "../store/slice/products-slice";
 
 export const Products = () => {
   const products = useSelector((state) => state.products.productsList);
