@@ -44,9 +44,13 @@ function App() {
   };
 
   useEffect(() => {
-    fetchCategories();
     fetchAllProducts();
+    fetchCategories();
   }, []);
+
+  useEffect(() => {
+    if (showAll) fetchAllProducts();
+  }, [showAll]);
 
   useEffect(() => {
     fetchAllProductsById();
