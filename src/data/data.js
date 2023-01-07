@@ -1,6 +1,7 @@
 import axios from "axios";
 import { productsActions } from "./../store/slice/products-slice";
 import { categoriesAction } from "./../store/slice/categories-slice";
+import { productActions } from "../store/slice/product-slice";
 
 export const fetchCategories = async (dispatch) => {
   const response = await axios
@@ -29,3 +30,11 @@ export const fetchAllProductsById = async (dispatch, id) => {
   dispatch(productsActions.showProducts(response.data));
 };
 
+export const fetchProduct = async (dispatch, productId) => {
+  const response = await axios
+    .get(`https://api.escuelajs.co/api/v1/products/${productId}`)
+    .catch((err) => {
+      console.log(err);
+    });
+  dispatch(productActions.setProduct(response.data));
+};
