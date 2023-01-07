@@ -12,6 +12,7 @@ import { Home } from "./pages/Home";
 import { Header } from "./Components/Header";
 import { Products } from "./pages/Products";
 import { Cart } from "./pages/Cart";
+import { ProductDetails } from "./pages/ProductDetails";
 
 function App() {
   const id = useSelector((state) => state.products.categoryId);
@@ -28,7 +29,7 @@ function App() {
   }, [showAll]);
 
   useEffect(() => {
-    fetchAllProductsById(id);
+    fetchAllProductsById(dispatch, id);
   }, [id]);
 
   return (
@@ -38,14 +39,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
-        <Route
-          path="*"
-          element={
-            <h1 style={{ padding: "4rem" }}>
-              Page not found... Please go back.
-            </h1>
-          }
-        />
+        <Route path="/product/:productId" element={<ProductDetails />} />
       </Routes>
     </Router>
   );

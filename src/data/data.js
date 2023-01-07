@@ -28,3 +28,4 @@ export const fetchAllProductsById = async (dispatch, id) => {
     });
   dispatch(productsActions.showProducts(response.data));
 };
+

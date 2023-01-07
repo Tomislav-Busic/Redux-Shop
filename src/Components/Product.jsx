@@ -1,9 +1,11 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 export const Product = ({ product }) => {
-  const { id, title, images, description, category, price } = product;
+  const { id, title, images, category, price } = product;
+
   return (
     <Card style={{ width: "18rem", margin: "1rem" }} id={id}>
       <Card.Img variant="top" src={images[0]} />
@@ -12,7 +14,9 @@ export const Product = ({ product }) => {
         <Card.Text>
           {category.name} {price}
         </Card.Text>
-        <Button variant="primary">See more</Button>
+        <Link to={`/product/${id}`}>
+          <Button variant="primary">See more</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
