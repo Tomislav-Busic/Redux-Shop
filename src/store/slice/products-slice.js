@@ -5,6 +5,7 @@ export const productsSlice = createSlice({
   initialState: {
     productsList: [],
     categoryId: null,
+    productName: "",
   },
   reducers: {
     showProducts(state, action) {
@@ -14,11 +15,7 @@ export const productsSlice = createSlice({
       state.categoryId = action.payload;
     },
     searchByName(state, action) {
-      state.productsList = state.productsList.filter(
-        (product) =>
-          product.title.toLowerCase().includes(action.payload) ||
-          product.title.includes(action.payload)
-      );
+      state.productName = action.payload;
     },
     sortProductsByHigherPrice(state, action) {
       const products = [...state.productsList];

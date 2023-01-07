@@ -5,6 +5,7 @@ import { Product } from "./../Components/Product";
 
 export const Products = () => {
   const products = useSelector((state) => state.products.productsList);
+  const productName = useSelector((state) => state.products.productName);
 
   return (
     <div className="page">
@@ -12,9 +13,13 @@ export const Products = () => {
       <Filters />
       <div className="cards">
         {products.length > 0 ? (
-          products.map((product) => {
-            return <Product key={product.id} product={product} />;
-          })
+          products
+            .filter((product) =>
+              product.title.toLowerCase().includes(productName)
+            )
+            .map((product) => {
+              return <Product key={product.id} product={product} />;
+            })
         ) : (
           <h1>
             There are currently no these products, please choose another
