@@ -28,7 +28,7 @@ function App() {
   }, [showAll]);
 
   useEffect(() => {
-    fetchAllProductsById(dispatch, id);
+    fetchAllProductsById(id);
   }, [id]);
 
   return (
