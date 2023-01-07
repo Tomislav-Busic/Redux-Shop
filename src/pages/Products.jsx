@@ -14,8 +14,10 @@ export const Products = () => {
       <div className="cards">
         {products.length > 0 ? (
           products
-            .filter((product) =>
-              product.title.toLowerCase().includes(productName)
+            .filter(
+              (product) =>
+                product.title.toLowerCase().includes(productName) ||
+                product.title.includes(productName)
             )
             .map((product) => {
               return <Product key={product.id} product={product} />;

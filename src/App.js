@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import axios from "axios";
-import { productsActions } from "./store/slice/products-slice";
-import { categoriesAction } from "./store/slice/categories-slice";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchAllProducts,
+  fetchCategories,
+  fetchAllProductsById,
+} from "./data/data";
 
 import { Home } from "./pages/Home";
 import { Header } from "./Components/Header";
@@ -12,48 +14,21 @@ import { Products } from "./pages/Products";
 import { Cart } from "./pages/Cart";
 
 function App() {
-  const dispatch = useDispatch();
   const id = useSelector((state) => state.products.categoryId);
   const showAll = useSelector((state) => state.products.showAll);
-
-  const fetchCategories = async () => {
-    const response = await axios
-      .get("https://api.escuelajs.co/api/v1/categories/?limit=6")
-      .catch((err) => {
-        console.log(err);
-      });
-    dispatch(categoriesAction.showCategories(response.data));
-  };
-
-  const fetchAllProducts = async () => {
-    const response = await axios
-      .get("https://api.escuelajs.co/api/v1/products")
-      .catch((err) => {
-        console.log(err);
-      });
-    dispatch(productsActions.showProducts(response.data));
-  };
-
-  const fetchAllProductsById = async () => {
-    const response = await axios
-      .get(`https://api.escuelajs.co/api/v1/categories/${id}/products`)
-      .catch((err) => {
-        console.log(err);
-      });
-    dispatch(productsActions.showProducts(response.data));
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchAllProducts();
-    fetchCategories();
+    fetchAllProducts(dispatch);
+    fetchCategories(dispatch);
   }, []);
 
   useEffect(() => {
-    if (showAll) fetchAllProducts();
+    if (showAll) fetchAllProducts(dispatch);
   }, [showAll]);
 
   useEffect(() => {
-    fetchAllProductsById();
+    fetchAllProductsById(dispatch, id);
   }, [id]);
 
   return (
