@@ -21,10 +21,7 @@ export const Products = () => {
               return <Product key={product.id} product={product} />;
             })
         ) : (
-          <h1>
-            There are currently no these products, please choose another
-            category.
-          </h1>
+          <h1>Loading...</h1>
         )}
       </div>
     </div>
