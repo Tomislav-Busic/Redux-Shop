@@ -48,6 +48,12 @@ export const cartSlice = createSlice({
         exsistingItem.totalPrice -= exsistingItem.price;
       }
     },
+    totalRemove(state, action) {
+      state.cartList = state.cartList.filter(
+        (item) => item.id !== action.payload
+      );
+      state.totalQuantity--;
+    },
   },
 });
 

@@ -51,9 +51,13 @@ export const ProductFavAndCart = ({ product }) => {
     <div className="d-flex flex-column align-items-center">
       {thisProduct && toggleProductCart && (
         <div className="d-flex m-2">
-          <Button onClick={removeFromCart}>-</Button>
+          <Button variant="success" onClick={removeFromCart}>
+            -
+          </Button>
           <h4 className="m-1">{FormatCurrency(thisProduct?.totalPrice)}</h4>
-          <Button onClick={addToCart}>+</Button>
+          <Button variant="success" onClick={addToCart}>
+            +
+          </Button>
         </div>
       )}
       <div

@@ -1,12 +1,13 @@
 import React from "react";
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/slice/cart-slice";
 
 export const Header = () => {
   const dispatch = useDispatch();
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity);
 
   const cartOpen = () => {
     dispatch(cartActions.toggleCart());
@@ -53,7 +54,7 @@ export const Header = () => {
               transform: "transition(25%,-25%)",
             }}
           >
-            3
+            {cartQuantity}
           </p>
         </Link>
         <Link
