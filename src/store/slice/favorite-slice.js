@@ -8,6 +8,10 @@ export const favoriteSlice = createSlice({
     totalQuantity: 0,
   },
   reducers: {
+    showFavItems(state, action) {
+      state.favList = action.payload;
+      state.totalQuantity = action.payload.length;
+    },
     toggleFav(state, action) {
       state.showFavorite = !state.showFavorite;
     },

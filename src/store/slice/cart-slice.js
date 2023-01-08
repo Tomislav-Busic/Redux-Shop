@@ -8,6 +8,10 @@ export const cartSlice = createSlice({
     isOpen: false,
   },
   reducers: {
+    showCartItems(state, action) {
+      state.cartList = action.payload;
+      state.totalQuantity = action.payload.length;
+    },
     toggleCart(state, action) {
       state.isOpen = !state.isOpen;
     },
