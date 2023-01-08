@@ -13,6 +13,7 @@ import { Header } from "./Components/Header";
 import { Products } from "./pages/Products";
 import { ProductDetails } from "./pages/ProductDetails";
 import { Cart } from "./Components/Cart";
+import { Favorite } from "./Components/Favorite";
 
 function App() {
   const id = useSelector((state) => state.products.categoryId);
@@ -36,6 +37,7 @@ function App() {
     <Router>
       <Header />
       <Cart />
+      <Favorite />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

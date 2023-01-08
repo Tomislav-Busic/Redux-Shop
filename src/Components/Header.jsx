@@ -4,13 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/slice/cart-slice";
+import { favoriteActions } from "../store/slice/favorite-slice";
 
 export const Header = () => {
   const dispatch = useDispatch();
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
+  const favQuantity = useSelector((state) => state.favorite.totalQuantity);
 
   const cartOpen = () => {
     dispatch(cartActions.toggleCart());
+  };
+
+  const favOpen = () => {
+    dispatch(favoriteActions.toggleFav());
   };
 
   return (
@@ -61,6 +67,7 @@ export const Header = () => {
           style={{
             position: "relative",
           }}
+          onClick={favOpen}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +91,7 @@ export const Header = () => {
               transform: "transition(15%,-25%)",
             }}
           >
-            5
+            {favQuantity}
           </p>
         </Link>
       </Container>
