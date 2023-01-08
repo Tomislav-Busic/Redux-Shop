@@ -5,6 +5,7 @@ export const productSlice = createSlice({
   initialState: {
     singleProduct: {},
     toggleDescription: false,
+    toggleProductCart: false,
   },
   reducers: {
     setProduct(state, action) {
@@ -13,9 +14,13 @@ export const productSlice = createSlice({
     cleanProduct(state, action) {
       state.singleProduct = {};
       state.toggleDescription = false;
+      state.toggleProductCart = false;
     },
     productDescription(state, action) {
       state.toggleDescription = !state.toggleDescription;
+    },
+    showProductCart(state, action) {
+      state.toggleProductCart = !state.toggleProductCart;
     },
   },
 });

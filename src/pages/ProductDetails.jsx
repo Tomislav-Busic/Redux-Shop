@@ -32,7 +32,7 @@ export const ProductDetails = () => {
   };
 
   return (
-    <div className="page">
+    <div className="page" style={{ textAlign: "center" }}>
       {Object.keys(product).length > 0 ? (
         <>
           <h3>{category.name}</h3>
@@ -64,7 +64,7 @@ export const ProductDetails = () => {
       ) : (
         <h1>Loading...</h1>
       )}
-      <ProductFavAndCart />
+      <ProductFavAndCart product={product} />
     </div>
   );
 };

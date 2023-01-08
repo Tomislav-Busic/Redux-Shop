@@ -5,7 +5,7 @@ import { productActions } from "../store/slice/product-slice";
 
 export const fetchCategories = async (dispatch) => {
   const response = await axios
-    .get("https://api.escuelajs.co/api/v1/categories/?limit=6")
+    .get("https://api.escuelajs.co/api/v1/categories/?limit=5")
     .catch((err) => {
       console.log(err);
     });

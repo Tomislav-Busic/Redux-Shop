@@ -1,10 +1,61 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FormatCurrency } from "../tools/formatCurrency";
+import { useSelector, useDispatch } from "react-redux";
+import { productActions } from "../store/slice/product-slice";
+import { cartActions } from "../store/slice/cart-slice";
 
-export const ProductFavAndCart = () => {
+export const ProductFavAndCart = ({ product }) => {
+  const { id, title, price, images } = product;
+
+  const toggleProductCart = useSelector(
+    (state) => state.product.toggleProductCart
+  );
+  const cartProducts = useSelector((state) => state.cart.cartList);
+
+  const dispatch = useDispatch();
+
+  const thisProduct = cartProducts.find((product) => product.id === id);
+
+  const handleProductCart = () => {
+    dispatch(productActions.showProductCart());
+    dispatch(
+      cartActions.addToCart({
+        id: id,
+        title: title,
+        price: price,
+        image: images[0],
+      })
+    );
+  };
+
+  const addToCart = () => {
+    dispatch(
+      cartActions.addToCart({
+        id: id,
+        title: title,
+        price: price,
+        image: images[0],
+      })
+    );
+  };
+
+  const removeFromCart = () => {
+    dispatch(cartActions.removeFromCart(id));
+  };
+
+  console.log(cartProducts);
+
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center">
+      {thisProduct && toggleProductCart && (
+        <div className="d-flex m-2">
+          <Button onClick={removeFromCart}>-</Button>
+          <h4 className="m-1">{FormatCurrency(thisProduct?.totalPrice)}</h4>
+          <Button onClick={addToCart}>+</Button>
+        </div>
+      )}
       <div
         style={{
           display: "flex",
@@ -12,7 +63,7 @@ export const ProductFavAndCart = () => {
           marginTop: "1rem",
         }}
       >
-        <Button variant="warning" className="m-1">
+        <Button variant="warning" className="m-1" onClick={handleProductCart}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
