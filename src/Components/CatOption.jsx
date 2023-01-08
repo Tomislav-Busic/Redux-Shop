@@ -12,7 +12,7 @@ export const CatOption = ({ option }) => {
   };
 
   return (
-    <Button className="m-1" onClick={choseCategory}>
+    <Button className="m-1" variant="success" onClick={choseCategory}>
       {name}
     </Button>
   );
