@@ -25,7 +25,9 @@ const Filters = () => {
 
   return (
     <div className="filters">
-      <Button onClick={showAllProducts}>All Products</Button>
+      <Button variant="danger" onClick={showAllProducts}>
+        All Products
+      </Button>
       <div className="cards">
         {categoryOptions.map((option) => (
           <CatOption option={option} key={option.id} />

@@ -19,4 +19,5 @@ npm i react-router-dom
 npm i axios
 npm install @reduxjs/toolkit
 npm i bootstrap react-bootstrap
+npm install react-simple-image-slider
 */

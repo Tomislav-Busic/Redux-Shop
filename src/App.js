@@ -11,8 +11,8 @@ import {
 import { Home } from "./pages/Home";
 import { Header } from "./Components/Header";
 import { Products } from "./pages/Products";
-import { Cart } from "./pages/Cart";
 import { ProductDetails } from "./pages/ProductDetails";
+import { Cart } from "./Components/Cart";
 
 function App() {
   const id = useSelector((state) => state.products.categoryId);
@@ -35,10 +35,10 @@ function App() {
   return (
     <Router>
       <Header />
+      <Cart />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
       </Routes>
     </Router>
