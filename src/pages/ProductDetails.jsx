@@ -25,14 +25,14 @@ export const ProductDetails = () => {
     return () => {
       dispatch(productActions.cleanProduct());
     };
-  }, [productId]);
+  }, [dispatch, productId]);
 
   const handleDescription = () => {
     dispatch(productActions.productDescription());
   };
 
   return (
-    <div className="page" style={{ textAlign: "center" }}>
+    <div className="page" style={{ textAlign: "center" }} key={id}>
       {Object.keys(product).length > 0 ? (
         <>
           <h3>{category.name}</h3>

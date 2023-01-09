@@ -13,6 +13,21 @@ export const CartItem = ({ item }) => {
     dispatch(cartActions.totalRemove(id));
   };
 
+  const incrementInCart = () => {
+    dispatch(
+      cartActions.addToCart({
+        id: id,
+        title: title,
+        price: price,
+        image: image,
+      })
+    );
+  };
+
+  const decrementInCart = () => {
+    dispatch(cartActions.removeFromCart(id));
+  };
+
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
       <img
@@ -32,8 +47,23 @@ export const CartItem = ({ item }) => {
           {FormatCurrency(price)}
         </div>
       </div>
-      <div>{FormatCurrency(totalPrice)}</div>
-      <Button variant="outline-danger" size="sm" onClick={removeFromCart}>
+      <div className="d-flex flex-column">
+        <div className="d-flex">
+          <Button
+            onClick={decrementInCart}
+            variant="outline-warning"
+            className="me-auto"
+            size="sm"
+          >
+            -
+          </Button>
+          <Button onClick={incrementInCart} variant="outline-success" size="sm">
+            +
+          </Button>
+        </div>
+        <div>{FormatCurrency(totalPrice)}</div>
+      </div>
+      <Button variant="danger" size="sm" onClick={removeFromCart}>
         &times;
       </Button>
     </Stack>
