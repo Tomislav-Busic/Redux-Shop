@@ -66,6 +66,7 @@ export const CardProduct = ({ product }) => {
               border: "1px solid grey",
             }}
             src={img}
+            alt={title}
           />
         ))}
       </div>

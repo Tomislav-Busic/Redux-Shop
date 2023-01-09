@@ -32,6 +32,7 @@ export const CartItem = ({ item }) => {
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
       <img
         src={image}
+        alt={title}
         style={{ height: "75px", width: "125px", objectFit: "cover" }}
       />
       <div className="me-auto">
