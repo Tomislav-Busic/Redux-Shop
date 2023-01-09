@@ -28,7 +28,7 @@ export const FavItems = ({ item }) => {
       </div>
       <Link to={`/product/${id}`}>
         <Button variant="outline-success" size="sm" onClick={closeFav}>
-          Go to product
+          Look
         </Button>
       </Link>
       <Button variant="outline-danger" size="sm" onClick={removeFromFav}>

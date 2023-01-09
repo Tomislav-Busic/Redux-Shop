@@ -48,11 +48,11 @@ export const CartItem = ({ item }) => {
         </div>
       </div>
       <div className="d-flex flex-column">
-        <div className="d-flex">
+        <div className="d-flex m-auto">
           <Button
+            className="mx-1"
             onClick={decrementInCart}
             variant="outline-warning"
-            className="me-auto"
             size="sm"
           >
             -
