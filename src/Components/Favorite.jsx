@@ -17,7 +17,7 @@ export const Favorite = () => {
 
   return (
     <Offcanvas show={isOpen} onHide={handleToggle} placement="end">
-      <Offcanvas.Header closeButton>Cart</Offcanvas.Header>
+      <Offcanvas.Header closeButton>Favorite</Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
           {favItems?.length > 0 ? (

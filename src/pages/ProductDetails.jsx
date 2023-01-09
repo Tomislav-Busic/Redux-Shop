@@ -48,7 +48,7 @@ export const ProductDetails = () => {
           {!toggleDescription ? (
             <div className="description">
               <p>{description.substring(0, 20)}...</p>
-              <Button variant="warning" onClick={handleDescription}>
+              <Button variant="success" onClick={handleDescription}>
                 See more
               </Button>
             </div>

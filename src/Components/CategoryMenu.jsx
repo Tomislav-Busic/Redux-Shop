@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
 import { productsActions } from "../store/slice/products-slice";
 
-export const CatOption = ({ option }) => {
+export const CategoryMenu = ({ option }) => {
   const { id, name } = option;
   const dispatch = useDispatch();
   const choseCategory = () => {

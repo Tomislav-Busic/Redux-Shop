@@ -3,7 +3,7 @@ import { Form, InputGroup, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import { productsActions } from "../store/slice/products-slice";
-import { CatOption } from "./CatOption";
+import { CategoryMenu } from "./CategoryMenu";
 
 const Filters = () => {
   const categoryOptions = useSelector(
@@ -30,7 +30,7 @@ const Filters = () => {
       </Button>
       <div className="cards">
         {categoryOptions.map((option) => (
-          <CatOption option={option} key={option.id} />
+          <CategoryMenu option={option} key={option.id} />
         ))}
       </div>
       <InputGroup className="mb-3">
