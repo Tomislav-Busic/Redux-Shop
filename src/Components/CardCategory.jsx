@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { productsActions } from "../store/slice/products-slice";
 
-export const Category = ({ category }) => {
+export const CardCategory = ({ category }) => {
   const { id, name, image } = category;
   const dispatch = useDispatch();
 

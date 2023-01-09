@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Category } from "../Components/Category";
+import { CardCategory } from "../Components/CardCategory";
 
 export const Home = () => {
   const categories = useSelector((state) => state.categories.categoriesList);
@@ -10,7 +10,7 @@ export const Home = () => {
       <h1>Categories</h1>
       <div className="cards">
         {categories.map((category) => {
-          return <Category key={category.id} category={category} />;
+          return <CardCategory key={category.id} category={category} />;
         })}
       </div>
     </div>

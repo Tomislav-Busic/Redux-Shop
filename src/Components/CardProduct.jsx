@@ -7,7 +7,7 @@ import { cartActions } from "../store/slice/cart-slice";
 import { favoriteActions } from "../store/slice/favorite-slice";
 import { useDispatch } from "react-redux";
 
-export const Product = ({ product }) => {
+export const CardProduct = ({ product }) => {
   const { id, title, images, category, price } = product;
   const [image, setImage] = useState(images[0]);
   const dispatch = useDispatch();

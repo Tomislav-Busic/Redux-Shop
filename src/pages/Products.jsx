@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Filters from "../Components/Filters";
-import { Product } from "./../Components/Product";
+import { CardProduct } from "../Components/CardProduct";
 
 export const Products = () => {
   const products = useSelector((state) => state.products.productsList);
@@ -20,7 +20,7 @@ export const Products = () => {
                 product.title.includes(productName)
             )
             .map((product) => {
-              return <Product key={product.id} product={product} />;
+              return <CardProduct key={product.id} product={product} />;
             })
         ) : (
           <h1>Loading...</h1>
