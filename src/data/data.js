@@ -21,7 +21,7 @@ export const fetchAllProducts = async (dispatch) => {
   dispatch(productsActions.showProducts(response.data));
 };
 
-export const fetchAllProductsById = async (dispatch, id) => {
+export const fetchProductsByCategoryId = async (dispatch, id) => {
   const response = await axios
     .get(`https://api.escuelajs.co/api/v1/categories/${id}/products`)
     .catch((err) => {

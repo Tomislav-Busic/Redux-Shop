@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllProducts,
   fetchCategories,
-  fetchAllProductsById,
+  fetchProductsByCategoryId,
 } from "./data/data";
 import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
@@ -50,7 +50,7 @@ function App() {
   }, [showAll]);
 
   useEffect(() => {
-    fetchAllProductsById(dispatch, id);
+    fetchProductsByCategoryId(dispatch, id);
   }, [id]);
 
   return (

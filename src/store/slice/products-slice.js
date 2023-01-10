@@ -14,6 +14,7 @@ export const productsSlice = createSlice({
     },
     showAllProducts(state, action) {
       state.showAll = action.payload;
+      state.categoryId = null;
     },
     showProductsByCategory(state, action) {
       state.categoryId = action.payload;
