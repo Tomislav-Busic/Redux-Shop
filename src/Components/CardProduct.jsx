@@ -12,8 +12,9 @@ export const CardProduct = ({ product }) => {
   const [image, setImage] = useState(images[0]);
   const dispatch = useDispatch();
 
-  const handleImage = (img) => {
+  const handleImage = (img, index) => {
     setImage(img);
+    console.log(index);
   };
 
   const addToCart = () => {
@@ -40,7 +41,7 @@ export const CardProduct = ({ product }) => {
   return (
     <Card
       style={{ width: "18rem", margin: "1rem" }}
-      id={id}
+      key={id}
       className="border-primary position-relative"
     >
       <Card.Img variant="top" src={image} />
@@ -56,9 +57,10 @@ export const CardProduct = ({ product }) => {
         className="position-absolute d-flex flex-column"
         style={{ bottom: "9rem" }}
       >
-        {images?.map((img) => (
+        {images?.map((img, index) => (
           <img
-            onClick={() => handleImage(img)}
+            key={index}
+            onClick={() => handleImage(img, index)}
             style={{
               height: "2rem",
               margin: "2px",
