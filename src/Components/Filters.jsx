@@ -15,11 +15,11 @@ const Filters = () => {
     dispatch(productsActions.showAllProducts(true));
   };
 
-  const handlePrice = (value) => {
+  const handleSortByPrice = (value) => {
     dispatch(productsActions.sortProductsByHigherPrice(value));
   };
 
-  const handleSearch = (name) => {
+  const handleSearchByName = (name) => {
     dispatch(productsActions.searchByName(name));
   };
 
@@ -38,11 +38,11 @@ const Filters = () => {
           aria-label="Default"
           aria-describedby="inputGroup-sizing-default"
           placeholder="Search by Name"
-          onChange={(e) => handleSearch(e.target.value)}
+          onChange={(e) => handleSearchByName(e.target.value)}
         />
       </InputGroup>
       <br />
-      <Form.Select onChange={(e) => handlePrice(e.target.value)}>
+      <Form.Select onChange={(e) => handleSortByPrice(e.target.value)}>
         <option value="all">Filter by price</option>
         <option value="lower">Lower price</option>
         <option value="higher">Higher price</option>

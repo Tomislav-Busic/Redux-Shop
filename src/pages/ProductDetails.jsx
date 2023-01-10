@@ -18,8 +18,6 @@ export const ProductDetails = () => {
   );
   const { id, title, price, images, category, description } = product;
 
-  console.log(product);
-
   useEffect(() => {
     fetchProduct(dispatch, productId);
     return () => {

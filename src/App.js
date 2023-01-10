@@ -24,8 +24,6 @@ function App() {
   const favItems = useSelector((state) => state.favorite.favList);
   const dispatch = useDispatch();
 
-  console.log(favItems);
-
   useEffect(() => {
     fetchAllProducts(dispatch);
     fetchCategories(dispatch);

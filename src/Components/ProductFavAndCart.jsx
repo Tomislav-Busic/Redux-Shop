@@ -56,8 +56,6 @@ export const ProductFavAndCart = ({ product }) => {
     dispatch(cartActions.removeFromCart(id));
   };
 
-  console.log(cartProducts);
-
   return (
     <div className="d-flex flex-column align-items-center">
       {thisProduct && toggleProductCart && (
