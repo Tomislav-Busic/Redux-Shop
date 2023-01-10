@@ -6,8 +6,8 @@ import { productActions } from "../store/slice/product-slice";
 export const fetchCategories = async (dispatch) => {
   const response = await axios
     .get("https://api.escuelajs.co/api/v1/categories/?limit=5")
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log("Err", error.message);
     });
   dispatch(categoriesAction.showCategories(response.data));
 };
@@ -15,8 +15,8 @@ export const fetchCategories = async (dispatch) => {
 export const fetchAllProducts = async (dispatch) => {
   const response = await axios
     .get("https://api.escuelajs.co/api/v1/products")
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log("Err", error.message);
     });
   dispatch(productsActions.showProducts(response.data));
 };
@@ -24,8 +24,8 @@ export const fetchAllProducts = async (dispatch) => {
 export const fetchProductsByCategoryId = async (dispatch, id) => {
   const response = await axios
     .get(`https://api.escuelajs.co/api/v1/categories/${id}/products`)
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log("Err", error.message);
     });
   dispatch(productsActions.showProducts(response.data));
 };
@@ -33,8 +33,8 @@ export const fetchProductsByCategoryId = async (dispatch, id) => {
 export const fetchProduct = async (dispatch, productId) => {
   const response = await axios
     .get(`https://api.escuelajs.co/api/v1/products/${productId}`)
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log("Err", error.message);
     });
   dispatch(productActions.setProduct(response.data));
 };

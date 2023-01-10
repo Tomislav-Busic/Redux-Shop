@@ -48,7 +48,7 @@ function App() {
   }, [showAll]);
 
   useEffect(() => {
-    fetchProductsByCategoryId(dispatch, id);
+    if (id !== null) fetchProductsByCategoryId(dispatch, id);
   }, [id]);
 
   return (
