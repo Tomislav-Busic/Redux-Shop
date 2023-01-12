@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { CardCategory } from "../Components/CardCategory";
 
-export const Home = () => {
+export const Categories = () => {
   const categories = useSelector((state) => state.categories.categoriesList);
 
   return (
