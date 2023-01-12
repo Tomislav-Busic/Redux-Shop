@@ -18,10 +18,10 @@ import { Cart } from "./Components/Cart";
 import { Favorite } from "./Components/Favorite";
 
 function App() {
-  const id = useSelector((state) => state.products.categoryId);
-  const showAll = useSelector((state) => state.products.showAll);
-  const carItems = useSelector((state) => state.cart.cartList);
-  const favItems = useSelector((state) => state.favorite.favList);
+  const categoryId = useSelector((state) => state.products.categoryId);
+  const showAllProducts = useSelector((state) => state.products.showAll);
+  const carItemsState = useSelector((state) => state.cart.cartList);
+  const favItemsState = useSelector((state) => state.favorite.favList);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,22 +34,22 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (carItems.length === 0) return;
-    localStorage.setItem("cartItems", JSON.stringify(carItems));
-  }, [carItems]);
+    if (carItemsState.length === 0) return;
+    localStorage.setItem("cartItems", JSON.stringify(carItemsState));
+  }, [carItemsState]);
 
   useEffect(() => {
-    if (favItems.length === 0) return;
-    localStorage.setItem("favoriteItems", JSON.stringify(favItems));
-  }, [favItems]);
+    if (favItemsState.length === 0) return;
+    localStorage.setItem("favoriteItems", JSON.stringify(favItemsState));
+  }, [favItemsState]);
 
   useEffect(() => {
-    if (showAll) fetchAllProducts(dispatch);
-  }, [showAll]);
+    if (showAllProducts) fetchAllProducts(dispatch);
+  }, [showAllProducts]);
 
   useEffect(() => {
-    if (id !== null) fetchProductsByCategoryId(dispatch, id);
-  }, [id]);
+    if (categoryId !== null) fetchProductsByCategoryId(dispatch, id);
+  }, [categoryId]);
 
   return (
     <Router>
