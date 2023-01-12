@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
+import "antd/dist/reset.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
