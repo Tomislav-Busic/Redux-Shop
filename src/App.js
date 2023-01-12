@@ -48,7 +48,7 @@ function App() {
   }, [showAllProducts]);
 
   useEffect(() => {
-    if (categoryId !== null) fetchProductsByCategoryId(dispatch, id);
+    if (categoryId !== null) fetchProductsByCategoryId(dispatch, categoryId);
   }, [categoryId]);
 
   return (
