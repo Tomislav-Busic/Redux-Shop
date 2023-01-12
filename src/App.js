@@ -10,7 +10,7 @@ import {
 import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
 
-import { Home } from "./pages/Home";
+import { Categories } from "./pages/Categories";
 import { Header } from "./Components/Header";
 import { Products } from "./pages/Products";
 import { ProductDetails } from "./pages/ProductDetails";
@@ -57,7 +57,7 @@ function App() {
       <Cart />
       <Favorite />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Categories />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
       </Routes>
