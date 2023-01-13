@@ -14,7 +14,7 @@ export const Products = () => {
 
   const indexOfLastPage = page + productsPerPage;
   const indexOfFirstPage = indexOfLastPage - productsPerPage;
-  const currentProducts = products.slice(indexOfFirstPage, indexOfLastPage);
+  
 
   return (
     <div className="page">
@@ -22,12 +22,13 @@ export const Products = () => {
       <Filters />
       <div className="cards">
         {products.length > 0 ? (
-          currentProducts
+          products
             .filter(
               (product) =>
                 product.title.toLowerCase().includes(productName) ||
                 product.title.includes(productName)
             )
+            .slice(indexOfFirstPage, indexOfLastPage)
             .map((product) => {
               return <CardProduct key={product.id} product={product} />;
             })
