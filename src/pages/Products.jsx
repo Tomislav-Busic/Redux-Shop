@@ -10,11 +10,25 @@ export const Products = () => {
 
   const total = products.length;
   const [page, setPage] = useState(1);
-  const [productsPerPage, setProductsPerPage] = useState(6);
+  const [productsPerPage, setProductsPerPage] = useState(10);
 
   const indexOfLastPage = page + productsPerPage;
   const indexOfFirstPage = indexOfLastPage - productsPerPage;
-  
+
+  const onShowSizeChange = (current, pageSize) => {
+    setProductsPerPage(pageSize);
+  };
+
+  /* const itemRender = (current, type, originalElement) => {
+    if (type === "prev") {
+      return <a>Previous</a>;
+    }
+    if (type === "next") {
+      return <a>Next</a>;
+    }
+
+    return originalElement;
+  }; */
 
   return (
     <div className="page">
@@ -41,6 +55,10 @@ export const Products = () => {
         pageSize={productsPerPage}
         total={total}
         current={page}
+        showSizeChanger
+        /* showQuickJumper */
+        onShowSizeChange={onShowSizeChange}
+        /* itemRender={itemRender} */
       />
     </div>
   );
