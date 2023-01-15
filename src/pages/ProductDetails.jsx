@@ -7,7 +7,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FormatCurrency } from "../tools/formatCurrency";
-import { ProductFavAndCart } from "../Components/ProductFavAndCart";
+import { ProductFavAndCart } from "../components/ProductFavAndCart";
 
 export const ProductDetails = () => {
   const { productId } = useParams();

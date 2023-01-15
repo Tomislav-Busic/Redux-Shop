@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Filters from "../Components/Filters";
-import { CardProduct } from "../Components/CardProduct";
+import Filters from "../components/Filters";
+import { CardProduct } from "../components/CardProduct";
 import { Pagination } from "antd";
 import { usePagination } from "../hooks/usePagination";
 

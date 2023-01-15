@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 import "antd/dist/reset.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,11 +12,11 @@ import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
 
 import { Categories } from "./pages/Categories";
-import { Header } from "./Components/Header";
+import { Header } from "./components/Header";
 import { Products } from "./pages/Products";
 import { ProductDetails } from "./pages/ProductDetails";
-import { Cart } from "./Components/Cart";
-import { Favorite } from "./Components/Favorite";
+import { Cart } from "./components/Cart";
+import { Favorite } from "./components/Favorite";
 
 function App() {
   const categoryId = useSelector((state) => state.products.categoryId);

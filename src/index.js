@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import "./index.scss";
 import App from "./App";
 import { Provider } from "react-redux";
 import { store } from "./store";
@@ -21,4 +21,5 @@ npm install @reduxjs/toolkit
 npm i bootstrap react-bootstrap
 npm install react-simple-image-slider
 npm i antd
+npm i sass
 */
