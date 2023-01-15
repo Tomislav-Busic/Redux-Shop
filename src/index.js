@@ -23,4 +23,5 @@ npm install react-simple-image-slider
 npm i antd
 npm i sass
 npm i gh-pages --save-dev
+npm run deploy
 */
