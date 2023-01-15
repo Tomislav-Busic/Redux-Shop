@@ -25,7 +25,7 @@ function App() {
   const favItemsState = useSelector((state) => state.favorite.favList);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  /*  useEffect(() => {
     if (carItemsState?.length === 0) return;
     localStorage.setItem("cartItems", JSON.stringify(carItemsState));
   }, [carItemsState]);
@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     if (favItemsState?.length === 0) return;
     localStorage.setItem("favoriteItems", JSON.stringify(favItemsState));
-  }, [favItemsState]);
+  }, [favItemsState]); */
 
   useEffect(() => {
     if (showAllProducts) fetchAllProducts(dispatch);
@@ -46,10 +46,10 @@ function App() {
   useEffect(() => {
     fetchAllProducts(dispatch);
     fetchCategories(dispatch);
-    const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    /* const cartItems = JSON.parse(localStorage.getItem("cartItems"));
     dispatch(cartActions.showCartItems(cartItems));
     const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems"));
-    dispatch(favoriteActions.showFavItems(favoriteItems));
+    dispatch(favoriteActions.showFavItems(favoriteItems)); */
   }, []);
 
   return (
