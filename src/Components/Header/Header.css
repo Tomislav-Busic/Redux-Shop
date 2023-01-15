@@ -2,4 +2,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.header-controllers .link-style {
+  position: relative;
+}
+.header-controllers .link-style .link-svg-cart {
+  height: 1.7rem;
+  fill: gold;
+  margin-right: 1rem;
+}
+.header-controllers .link-style .link-svg-fav {
+  height: 1.7rem;
+  fill: crimson;
+  margin-right: 1rem;
+}
+.header-controllers .link-style p {
+  position: absolute;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 1px;
+}
+.header-controllers .link-style .cart {
+  top: -25%;
+  left: 25%;
+  transform: transition(25%, -25%);
+}
+.header-controllers .link-style .fav {
+  top: -15%;
+  left: 15%;
+  transform: transition(15%, -15%);
 }/*# sourceMappingURL=Header.css.map */

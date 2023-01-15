@@ -3,5 +3,39 @@
 .header-controllers {
     @include flex-center;
 
+    .link-style {
+        position: relative;
 
+        .link-svg-cart {
+            height: 1.7rem;
+            fill: gold;
+            margin-right: 1rem;
+        }
+
+        .link-svg-fav {
+            height: 1.7rem;
+            fill: crimson;
+            margin-right: 1rem;
+        }
+
+        p {
+            position: absolute;
+            color: black;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            padding: 1px;
+        }
+
+        .cart {
+            top: -25%;
+            left: 25%;
+            transform: transition(25%, -25%);
+        }
+
+        .fav {
+            top: -15%;
+            left: 15%;
+            transform: transition(15%, -15%);
+        }
+    }
 }
