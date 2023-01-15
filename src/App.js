@@ -26,15 +26,6 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchAllProducts(dispatch);
-    fetchCategories(dispatch); /* 
-    const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    dispatch(cartActions.showCartItems(cartItems));
-    const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems"));
-    dispatch(favoriteActions.showFavItems(favoriteItems)); */
-  }, []);
-
-  /* useEffect(() => {
     if (carItemsState?.length === 0) return;
     localStorage.setItem("cartItems", JSON.stringify(carItemsState));
   }, [carItemsState]);
@@ -42,7 +33,7 @@ function App() {
   useEffect(() => {
     if (favItemsState?.length === 0) return;
     localStorage.setItem("favoriteItems", JSON.stringify(favItemsState));
-  }, [favItemsState]); */
+  }, [favItemsState]);
 
   useEffect(() => {
     if (showAllProducts) fetchAllProducts(dispatch);
@@ -52,17 +43,28 @@ function App() {
     if (categoryId !== null) fetchProductsByCategoryId(dispatch, categoryId);
   }, [categoryId]);
 
+  useEffect(() => {
+    fetchAllProducts(dispatch);
+    fetchCategories(dispatch);
+    const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    dispatch(cartActions.showCartItems(cartItems));
+    const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems"));
+    dispatch(favoriteActions.showFavItems(favoriteItems));
+  }, []);
+
   return (
-    <Router>
-      <Header />
-      <Cart />
-      <Favorite />
-      <Routes>
-        <Route path="/" element={<Categories />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Header />
+        <Cart />
+        <Favorite />
+        <Routes>
+          <Route path="/" element={<Categories />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/product/:productId" element={<ProductDetails />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
