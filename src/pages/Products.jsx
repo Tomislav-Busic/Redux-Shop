@@ -1,34 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import Filters from "../Components/Filters";
 import { CardProduct } from "../Components/CardProduct";
 import { Pagination } from "antd";
+import { usePagination } from "../hooks/usePagination";
 
 export const Products = () => {
   const products = useSelector((state) => state.products.productsList);
   const productName = useSelector((state) => state.products.productName);
+  const page = useSelector((state) => state.pagination.page);
+  const productsPerPage = useSelector(
+    (state) => state.pagination.productsPerPage
+  );
+
+  const [indexOfLastPage, indexOfFirstPage, onShowSizeChange, setPage] =
+    usePagination();
 
   const total = products.length;
-  const [page, setPage] = useState(1);
-  const [productsPerPage, setProductsPerPage] = useState(10);
-
-  const indexOfLastPage = page + productsPerPage;
-  const indexOfFirstPage = indexOfLastPage - productsPerPage;
-
-  const onShowSizeChange = (current, pageSize) => {
-    setProductsPerPage(pageSize);
-  };
-
-  /* const itemRender = (current, type, originalElement) => {
-    if (type === "prev") {
-      return <a>Previous</a>;
-    }
-    if (type === "next") {
-      return <a>Next</a>;
-    }
-
-    return originalElement;
-  }; */
 
   return (
     <div className="page">
