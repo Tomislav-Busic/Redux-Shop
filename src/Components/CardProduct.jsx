@@ -42,7 +42,7 @@ export const CardProduct = ({ product }) => {
     <Card
       style={{ width: "18rem", margin: "1rem" }}
       key={id}
-      className="border-primary position-relative"
+      className="border-secondary position-relative"
     >
       <Card.Img variant="top" src={image} />
       <Button
@@ -77,7 +77,7 @@ export const CardProduct = ({ product }) => {
         <Card.Text>{FormatCurrency(price)}</Card.Text>
         <div className="d-flex">
           <Link to={`/product/${id}`}>
-            <Button variant="primary">See more</Button>
+            <Button variant="secondary">See more</Button>
           </Link>
           <div className="d-flex m-auto">
             <Link

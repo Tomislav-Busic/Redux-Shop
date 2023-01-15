@@ -1,11 +1,15 @@
 @import "./styles/mixsins.scss";
+@import "./styles/variables.scss";
 .page {
-  @include flex-center;
+  @include flex-center-column;
   padding: 4rem 1rem;
-  flex-direction: column;
   min-height: 100vh;
+  background-color: $bg-color-pink;
 }
 
+.page-change-background {
+  background-color: $bg-color-whitesmoke;
+}
 .cards {
   padding: 1rem;
   @include flex-center;
@@ -14,15 +18,13 @@
 
 .filters {
   padding: 1rem;
-  @include flex-center;
-  flex-direction: column;
+  @include flex-center-column;
 }
 
 .description {
-  @include flex-center;
-  flex-direction: column;
+  @include flex-center-column;
   text-align: center;
   font-size: 1rem;
-    font-weight: bolder;
+  font-weight: bolder;
     max-width: 28rem;
 }

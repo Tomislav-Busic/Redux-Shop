@@ -12,7 +12,7 @@ import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
 
 import { Categories } from "./pages/Categories";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
 import { Products } from "./pages/Products";
 import { ProductDetails } from "./pages/ProductDetails";
 import { Cart } from "./components/Cart";

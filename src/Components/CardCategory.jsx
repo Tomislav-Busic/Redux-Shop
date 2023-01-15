@@ -14,12 +14,15 @@ export const CardCategory = ({ category }) => {
   };
 
   return (
-    <Card style={{ width: "18rem", margin: "1rem" }} className="border-success">
+    <Card
+      style={{ width: "18rem", margin: "1rem" }}
+      className="border-secondary"
+    >
       <Card.Img variant="top" src={image} alt={name} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Link to={"products"}>
-          <Button variant="success" onClick={handleCategory}>
+          <Button variant="secondary" onClick={handleCategory}>
             Go to {name}
           </Button>
         </Link>
