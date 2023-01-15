@@ -15,7 +15,7 @@ export const CategoryMenu = ({ option }) => {
   return (
     <Button
       className="m-1"
-      variant={id === activeId ? "warning" : "success"}
+      variant={id === activeId ? "warning" : "dark"}
       onClick={choseCategory}
     >
       {name}

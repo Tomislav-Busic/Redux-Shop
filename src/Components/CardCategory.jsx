@@ -22,7 +22,7 @@ export const CardCategory = ({ category }) => {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Link to={"products"}>
-          <Button variant="secondary" onClick={handleCategory}>
+          <Button variant="dark" onClick={handleCategory}>
             Go to {name}
           </Button>
         </Link>
