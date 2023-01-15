@@ -1,32 +1,25 @@
+@import "./styles/mixsins.scss";
 .page {
+  @include flex-center;
   padding: 4rem 1rem;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
 }
 
 .cards {
   padding: 1rem;
-  display: flex;
+  @include flex-center;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .filters {
   padding: 1rem;
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   flex-direction: column;
   text-align: center;
   font-size: 1rem;
