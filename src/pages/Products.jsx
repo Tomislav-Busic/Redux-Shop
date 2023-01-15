@@ -6,6 +6,7 @@ import { Pagination } from "antd";
 import { usePagination } from "../hooks/usePagination";
 
 export const Products = () => {
+  const theme = useSelector((state) => state.theme.themeState);
   const products = useSelector((state) => state.products.productsList);
   const productName = useSelector((state) => state.products.productName);
   const page = useSelector((state) => state.pagination.page);
@@ -19,7 +20,7 @@ export const Products = () => {
   const total = products.length;
 
   return (
-    <div className="page">
+    <div className={`page ${theme && "page-change-background"}`}>
       <h1>Products</h1>
       <Filters />
       <div className="cards">

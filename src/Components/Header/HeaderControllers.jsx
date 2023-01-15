@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/slice/cart-slice";
 import { favoriteActions } from "../../store/slice/favorite-slice";
+import { themeAction } from "../../store/slice/theme-slice";
 
 export const HeaderControllers = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,10 @@ export const HeaderControllers = () => {
 
   const favOpen = () => {
     dispatch(favoriteActions.toggleFav());
+  };
+
+  const changeTheme = () => {
+    dispatch(themeAction.changeTheme());
   };
 
   return (
@@ -43,10 +48,8 @@ export const HeaderControllers = () => {
         <input
           className="form-check-input"
           type="checkbox"
-          role="switch" /* 
-            onClick={() => {
-              setDarkTheme(!darkTheme);
-            }} */
+          role="switch"
+          onClick={changeTheme}
         />
       </div>
     </div>

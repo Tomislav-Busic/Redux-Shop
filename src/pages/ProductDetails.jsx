@@ -11,12 +11,13 @@ import { ProductFavAndCart } from "../components/ProductFavAndCart";
 
 export const ProductDetails = () => {
   const { productId } = useParams();
-  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.themeState);
   const product = useSelector((state) => state.product.singleProduct);
   const toggleDescription = useSelector(
     (state) => state.product.toggleDescription
   );
   const { id, title, price, images, category, description } = product;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetchProduct(dispatch, productId);
@@ -30,7 +31,11 @@ export const ProductDetails = () => {
   };
 
   return (
-    <div className="page" style={{ textAlign: "center" }} key={id}>
+    <div
+      className={`page ${theme && "page-change-background"}`}
+      style={{ textAlign: "center" }}
+      key={id}
+    >
       {Object.keys(product).length > 0 ? (
         <>
           <h3>{category.name}</h3>

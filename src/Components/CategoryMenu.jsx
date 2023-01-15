@@ -7,6 +7,7 @@ import { productsActions } from "../store/slice/products-slice";
 export const CategoryMenu = ({ option }) => {
   const { id, name } = option;
   const activeId = useSelector((state) => state.products.categoryId);
+  const theme = useSelector((state) => state.theme.themeState);
   const dispatch = useDispatch();
   const choseCategory = () => {
     dispatch(productsActions.showProductsByCategory(id));
@@ -15,7 +16,7 @@ export const CategoryMenu = ({ option }) => {
   return (
     <Button
       className="m-1"
-      variant={id === activeId ? "warning" : "dark"}
+      variant={id === activeId ? "warning" : !theme ? "dark" : "success"}
       onClick={choseCategory}
     >
       {name}

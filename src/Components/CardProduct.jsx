@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import { FormatCurrency } from "../tools/formatCurrency";
 import { cartActions } from "../store/slice/cart-slice";
 import { favoriteActions } from "../store/slice/favorite-slice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export const CardProduct = ({ product }) => {
   const { id, title, images, category, price } = product;
+  const theme = useSelector((state) => state.theme.themeState);
   const [image, setImage] = useState(images[0]);
   const dispatch = useDispatch();
 
@@ -42,7 +43,9 @@ export const CardProduct = ({ product }) => {
     <Card
       style={{ width: "18rem", margin: "1rem" }}
       key={id}
-      className="border-secondary position-relative"
+      className={`position-relative ${
+        !theme ? "border-secondary" : "border-primary"
+      }`}
     >
       <Card.Img variant="top" src={image} />
       <Button
@@ -77,7 +80,7 @@ export const CardProduct = ({ product }) => {
         <Card.Text>{FormatCurrency(price)}</Card.Text>
         <div className="d-flex">
           <Link to={`/product/${id}`}>
-            <Button variant="secondary">See more</Button>
+            <Button variant={!theme ? "secondary" : "primary"}>See more</Button>
           </Link>
           <div className="d-flex m-auto">
             <Link
