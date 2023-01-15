@@ -6,6 +6,7 @@ import { productsActions } from "../store/slice/products-slice";
 import { CategoryMenu } from "./CategoryMenu";
 
 const Filters = () => {
+  const categoryId = useSelector((state) => state.products.categoryId);
   const categoryOptions = useSelector(
     (state) => state.categories.categoriesList
   );
@@ -25,7 +26,10 @@ const Filters = () => {
 
   return (
     <div className="filters">
-      <Button variant="danger" onClick={showAllProducts}>
+      <Button
+        variant={categoryId !== null ? "danger" : "warning"}
+        onClick={showAllProducts}
+      >
         All Products
       </Button>
       <div className="cards">
