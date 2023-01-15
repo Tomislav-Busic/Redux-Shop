@@ -17,7 +17,7 @@ export const ProductFavAndCart = ({ product }) => {
 
   const dispatch = useDispatch();
 
-  const thisProduct = cartProducts.find((product) => product.id === id);
+  const thisProduct = cartProducts?.find((product) => product.id === id);
 
   const handleProductCart = () => {
     dispatch(productActions.showProductCart());

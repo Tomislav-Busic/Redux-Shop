@@ -27,17 +27,14 @@ function App() {
 
   useEffect(() => {
     fetchAllProducts(dispatch);
-    fetchCategories(dispatch);
-  }, []);
-
-  useEffect(() => {
+    fetchCategories(dispatch); /* 
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
     dispatch(cartActions.showCartItems(cartItems));
     const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems"));
-    dispatch(favoriteActions.showFavItems(favoriteItems));
+    dispatch(favoriteActions.showFavItems(favoriteItems)); */
   }, []);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (carItemsState?.length === 0) return;
     localStorage.setItem("cartItems", JSON.stringify(carItemsState));
   }, [carItemsState]);
@@ -45,7 +42,7 @@ function App() {
   useEffect(() => {
     if (favItemsState?.length === 0) return;
     localStorage.setItem("favoriteItems", JSON.stringify(favItemsState));
-  }, [favItemsState]);
+  }, [favItemsState]); */
 
   useEffect(() => {
     if (showAllProducts) fetchAllProducts(dispatch);

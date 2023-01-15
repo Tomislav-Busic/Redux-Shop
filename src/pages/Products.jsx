@@ -24,7 +24,7 @@ export const Products = () => {
       <h1>Products</h1>
       <Filters />
       <div className="cards">
-        {products.length > 0 ? (
+        {products?.length > 0 ? (
           products
             .filter(
               (product) =>
