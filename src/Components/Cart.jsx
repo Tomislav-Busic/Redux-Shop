@@ -22,8 +22,8 @@ export const Cart = () => {
       <Offcanvas.Header closeButton>Cart</Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
-          {cartItems.length > 0 ? (
-            cartItems.map((item) => <CartItem item={item} key={item.id} />)
+          {cartItems?.length > 0 ? (
+            cartItems?.map((item) => <CartItem item={item} key={item.id} />)
           ) : (
             <h1>
               You have no products in your cart yet, please choose some from{" "}

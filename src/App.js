@@ -28,6 +28,9 @@ function App() {
   useEffect(() => {
     fetchAllProducts(dispatch);
     fetchCategories(dispatch);
+  }, []);
+
+  useEffect(() => {
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
     dispatch(cartActions.showCartItems(cartItems));
     const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems"));
@@ -35,12 +38,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (carItemsState.length === 0) return;
+    if (carItemsState?.length === 0) return;
     localStorage.setItem("cartItems", JSON.stringify(carItemsState));
   }, [carItemsState]);
 
   useEffect(() => {
-    if (favItemsState.length === 0) return;
+    if (favItemsState?.length === 0) return;
     localStorage.setItem("favoriteItems", JSON.stringify(favItemsState));
   }, [favItemsState]);
 
