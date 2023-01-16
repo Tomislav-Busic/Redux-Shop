@@ -46,6 +46,7 @@ export const ProductDetails = () => {
             showBullets={true}
             showNavs={true}
           />
+          <br />
           <h1>{title}</h1>
           <h2>{FormatCurrency(price)}</h2>
           {!toggleDescription ? (
