@@ -10,7 +10,7 @@ export const cartSlice = createSlice({
   reducers: {
     showCartItems(state, action) {
       state.cartList = action.payload;
-      state.totalQuantity = action.payload?.length;
+      state.totalQuantity = action.payload.length;
     },
     toggleCart(state, action) {
       state.isOpen = !state.isOpen;
@@ -18,7 +18,7 @@ export const cartSlice = createSlice({
     addToCart(state, action) {
       const newItem = action.payload;
 
-      const exsistingItem = state.cartList?.find(
+      const exsistingItem = state.cartList.find(
         (item) => item.id === newItem.id
       );
 
@@ -26,7 +26,7 @@ export const cartSlice = createSlice({
         exsistingItem.quantity++;
         exsistingItem.totalPrice += newItem.price;
       } else {
-        state.cartList?.push({
+        state.cartList.push({
           id: newItem.id,
           price: newItem.price,
           quantity: 1,

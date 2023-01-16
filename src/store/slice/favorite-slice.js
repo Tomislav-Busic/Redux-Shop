@@ -10,7 +10,7 @@ export const favoriteSlice = createSlice({
   reducers: {
     showFavItems(state, action) {
       state.favList = action.payload;
-      state.totalQuantity = action.payload?.length;
+      state.totalQuantity = action.payload.length;
     },
     toggleFav(state, action) {
       state.showFavorite = !state.showFavorite;
@@ -18,12 +18,12 @@ export const favoriteSlice = createSlice({
     addToFavList(state, action) {
       const newItem = action.payload;
 
-      const exsistingItem = state.favList?.find(
+      const exsistingItem = state.favList.find(
         (item) => item.id === newItem.id
       );
 
       if (!exsistingItem) {
-        state.favList?.push({
+        state.favList.push({
           id: newItem.id,
           name: newItem.name,
           image: newItem.image,
