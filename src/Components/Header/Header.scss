@@ -1,4 +1,5 @@
 @import "../../styles/mixsins.scss";
+@import "../../styles/variables.scss";
 
 .header-controllers {
     @include flex-center;
@@ -8,19 +9,19 @@
 
         .link-svg-cart {
             height: 1.7rem;
-            fill: gold;
+            fill: $cart-color-header;
             margin-right: 1rem;
         }
 
         .link-svg-fav {
             height: 1.7rem;
-            fill: crimson;
+            fill: $fav-color;
             margin-right: 1rem;
         }
 
         p {
             position: absolute;
-            color: black;
+            color: $svg-number-color;
             font-weight: bolder;
             font-size: 1.2rem;
             padding: 1px;
