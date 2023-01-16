@@ -37,5 +37,26 @@
             left: 15%;
             transform: transition(15%, -15%);
         }
+
+        .animate {
+            animation: svg 4s linear infinite;
+        }
+
+        @keyframes svg {
+            0% {
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+            }
+
+            50% {
+                transform: scale(1.5);
+                transition: all 0.3s ease-in-out;
+            }
+
+            100% {
+                transform: scale(1);
+                transition: all 0.3s ease-in-out;
+            }
+        }
     }
 }
