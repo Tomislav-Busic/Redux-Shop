@@ -1,0 +1,80 @@
+@import "../../styles/mixsins.scss";
+@import "../../styles/variables.scss";
+
+.card-product {
+    position: relative;
+    width: 18rem;
+    margin: 1rem;
+
+    .category-btn {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        padding: 0;
+    }
+
+    .img-change {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 9rem;
+
+        .img {
+            height: 2rem;
+            margin: 2px;
+            cursor: pointer;
+            border: 1px solid grey;
+        }
+    }
+
+    .svg-container {
+        display: flex;
+        position: relative;
+
+        .link-cart {
+            @include flex-center-column;
+
+            svg {
+                position: absolute;
+                left: 2rem;
+                height: 1.7rem;
+                fill: $cart-color;
+            }
+
+            p {
+                @include card-product-p;
+                left: 2.4rem;
+                color: $cart-color;
+            }
+        }
+
+        .link-cart:hover {
+            p {
+                @include card-product-svg-hover;
+            }
+        }
+
+        .link-fav {
+            @include flex-center-column;
+
+            svg {
+                position: absolute;
+                left: 6rem;
+                height: 1.7rem;
+                fill: $fav-color;
+            }
+
+            p {
+                @include card-product-p;
+                left: 6.2rem;
+                color: $fav-color;
+            }
+        }
+
+        .link-fav:hover {
+            p {
+                @include card-product-svg-hover;
+            }
+        }
+    }
+}
