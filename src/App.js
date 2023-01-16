@@ -60,9 +60,17 @@ function App() {
         <Favorite />
         <Routes>
           <Route path="/" element={<Categories />} />
+          <Route path="/Redux-Shop" element={<Categories />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
-          <Route path="*" element={<Categories />} />
+          <Route
+            path="*"
+            element={
+              <h1 style={{ textAlign: "center", paddingTop: "5rem" }}>
+                Please return to the home page
+              </h1>
+            }
+          />
         </Routes>
       </Router>
     </>
