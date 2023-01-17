@@ -32,24 +32,30 @@
         margin: auto;
 
         .effect {
-            position: relative;
+            cursor: pointer;
             height: 1.7rem;
+            transform: scale(1);
+            transition: all 0.4s ease-in-out 0s;
 
-            &:before {
-                content: "Add";
-                color: black;
-                position: absolute;
-                top: 0;
-                margin: -1rem 1rem;
-                visibility: hidden;
-                transform: translateY(0);
-                transition: all 1s ease-in-out 0s;
+            &:hover {
+                transform: scale(1.2);
             }
 
-            &:hover:before {
-                visibility: visible;
-                transform: translateY(-20px);
-            }
+            /* &:before {
+                        content: "Add";
+                        color: black;
+                        position: absolute;
+                        top: 0;
+                        margin: 1rem 0;
+                        visibility: hidden;
+                        transform: translateY(0);
+                        transition: all 1s ease-in-out 0s;
+                    }
+        
+                    &:hover:before {
+                        visibility: visible;
+                        transform: translateY(-20px);
+                    } */
         }
     }
 }
