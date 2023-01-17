@@ -9,13 +9,3 @@
     justify-content: center;
     flex-direction: column;
 }
-@mixin card-product-p {
-    position: absolute;
-    display: none;
-    font-size: 0.8rem;
-}
-
-@mixin card-product-svg-hover {
-    transform: translateY(-20px);
-    display: block;
-}

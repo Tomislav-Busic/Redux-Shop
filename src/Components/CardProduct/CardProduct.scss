@@ -29,51 +29,26 @@
 
     .svg-container {
         display: flex;
-        position: relative;
+        margin: auto;
 
-        .link-cart {
-            @include flex-center-column;
+        .effect {
+            position: relative;
+            height: 1.7rem;
 
-            svg {
+            &:before {
+                content: "Add";
+                color: black;
                 position: absolute;
-                left: 2rem;
-                height: 1.7rem;
-                fill: $cart-color;
+                top: 0;
+                margin: -1rem 1rem;
+                visibility: hidden;
+                transform: translateY(0);
+                transition: all 1s ease-in-out 0s;
             }
 
-            p {
-                @include card-product-p;
-                left: 2.4rem;
-                color: $cart-color;
-            }
-        }
-
-        .link-cart:hover {
-            p {
-                @include card-product-svg-hover;
-            }
-        }
-
-        .link-fav {
-            @include flex-center-column;
-
-            svg {
-                position: absolute;
-                left: 6rem;
-                height: 1.7rem;
-                fill: $fav-color;
-            }
-
-            p {
-                @include card-product-p;
-                left: 6.2rem;
-                color: $fav-color;
-            }
-        }
-
-        .link-fav:hover {
-            p {
-                @include card-product-svg-hover;
+            &:hover:before {
+                visibility: visible;
+                transform: translateY(-20px);
             }
         }
     }

@@ -23,51 +23,23 @@
 }
 .card-product .svg-container {
   display: flex;
+  margin: auto;
+}
+.card-product .svg-container .effect {
   position: relative;
-}
-.card-product .svg-container .link-cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.card-product .svg-container .link-cart svg {
-  position: absolute;
-  left: 2rem;
   height: 1.7rem;
-  fill: #333;
 }
-.card-product .svg-container .link-cart p {
+.card-product .svg-container .effect:before {
+  content: "Add";
+  color: black;
   position: absolute;
-  display: none;
-  font-size: 0.8rem;
-  left: 2.4rem;
-  color: #333;
+  top: 0;
+  margin: -1rem 1rem;
+  visibility: hidden;
+  transform: translateY(0);
+  transition: all 1s ease-in-out 0s;
 }
-.card-product .svg-container .link-cart:hover p {
+.card-product .svg-container .effect:hover:before {
+  visibility: visible;
   transform: translateY(-20px);
-  display: block;
-}
-.card-product .svg-container .link-fav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.card-product .svg-container .link-fav svg {
-  position: absolute;
-  left: 6rem;
-  height: 1.7rem;
-  fill: crimson;
-}
-.card-product .svg-container .link-fav p {
-  position: absolute;
-  display: none;
-  font-size: 0.8rem;
-  left: 6.2rem;
-  color: crimson;
-}
-.card-product .svg-container .link-fav:hover p {
-  transform: translateY(-20px);
-  display: block;
 }/*# sourceMappingURL=CardProduct.css.map */
