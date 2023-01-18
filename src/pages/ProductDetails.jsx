@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchProduct } from "../data/data";
 import { productActions } from "../store/slice/product-slice";
-import SimpleImageSlider from "react-simple-image-slider";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FormatCurrency } from "../tools/formatCurrency";
 import { ProductFavAndCart } from "../components/ProductFavAndCart";
+import { ImageSlider } from "../components/ImageSlider/ImageSlider";
 
 export const ProductDetails = () => {
   const { productId } = useParams();
@@ -39,13 +39,7 @@ export const ProductDetails = () => {
       {Object.keys(product).length > 0 ? (
         <>
           <h3>{category.name}</h3>
-          <SimpleImageSlider
-            width={396}
-            height={396}
-            images={images}
-            showBullets={true}
-            showNavs={true}
-          />
+          <ImageSlider images={images} />
           <br />
           <h1>{title}</h1>
           <h2>{FormatCurrency(price)}</h2>

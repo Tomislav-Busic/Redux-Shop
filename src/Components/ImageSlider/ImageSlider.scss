@@ -1,0 +1,16 @@
+.images-slider {
+    position: relative;
+
+    .images-container {
+
+        img {
+            &:first-child {
+                display: block;
+            }
+
+            display: none;
+        }
+    }
+
+
+}

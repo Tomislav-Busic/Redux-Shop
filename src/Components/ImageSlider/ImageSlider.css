@@ -1,0 +1,9 @@
+.images-slider {
+  position: relative;
+}
+.images-slider .images-container img {
+  display: none;
+}
+.images-slider .images-container img:first-child {
+  display: block;
+}/*# sourceMappingURL=ImageSlider.css.map */
