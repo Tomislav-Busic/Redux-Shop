@@ -9,6 +9,12 @@
   top: 0.5rem;
   padding: 0;
 }
+.card-product .img-card {
+  height: 13rem;
+  max-height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .card-product .img-change {
   position: absolute;
   display: flex;
@@ -17,6 +23,7 @@
 }
 .card-product .img-change .img {
   height: 2rem;
+  width: 3rem;
   margin: 2px;
   cursor: pointer;
   border: 1px solid grey;

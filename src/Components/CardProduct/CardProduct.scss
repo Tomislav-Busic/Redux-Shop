@@ -13,6 +13,12 @@
         padding: 0;
     }
 
+    .img-card {
+        height: 13rem;
+        max-height: 13rem;
+        object-fit: cover;
+    }
+
     .img-change {
         position: absolute;
         display: flex;
@@ -21,6 +27,7 @@
 
         .img {
             height: 2rem;
+            width: 3rem;
             margin: 2px;
             cursor: pointer;
             border: 1px solid grey;

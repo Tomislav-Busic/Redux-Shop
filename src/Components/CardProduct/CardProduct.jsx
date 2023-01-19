@@ -47,7 +47,7 @@ export const CardProduct = ({ product }) => {
         !theme ? "border-secondary" : "border-primary"
       }`}
     >
-      <Card.Img variant="top" src={image} />
+      <Card.Img className="img-card" variant="top" src={image} />
       <Button className="category-btn" size="sm" variant="warning">
         {category.name}
       </Button>
