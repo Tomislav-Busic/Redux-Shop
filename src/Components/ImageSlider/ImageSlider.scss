@@ -1,7 +1,10 @@
+@import "../../styles/variables.scss";
+
 .images-slider {
     position: relative;
 
     .images-container {
+        height: 300px;
 
         img {
             &:first-child {
@@ -9,8 +12,29 @@
             }
 
             display: none;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
         }
     }
 
+    .btn {
+        position: absolute;
+        top: 50%;
+        height: 3rem;
+        fill: $fav-color;
+        border: none;
+        z-index: 1;
+        transition: all 0.5s ease-in-out;
 
+        &:first-child {
+            left: 0;
+            transform: rotate(-180deg);
+        }
+
+        &:last-child {
+            right: 0;
+        }
+    }
 }

@@ -1,9 +1,33 @@
 .images-slider {
   position: relative;
 }
+.images-slider .images-container {
+  height: 300px;
+}
 .images-slider .images-container img {
   display: none;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
 }
 .images-slider .images-container img:first-child {
   display: block;
+}
+.images-slider .btn {
+  position: absolute;
+  top: 50%;
+  height: 3rem;
+  fill: crimson;
+  border: none;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.images-slider .btn:first-child {
+  left: 0;
+  transform: rotate(-180deg);
+}
+.images-slider .btn:last-child {
+  right: 0;
 }/*# sourceMappingURL=ImageSlider.css.map */
