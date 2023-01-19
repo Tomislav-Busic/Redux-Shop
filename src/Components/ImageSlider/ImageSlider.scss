@@ -5,6 +5,7 @@
 
     .images-container {
         height: 300px;
+        position: relative;
 
         img {
             &:first-child {
@@ -16,8 +17,20 @@
             width: 100%;
             object-fit: cover;
             border-radius: 0.5rem;
+            box-shadow: 5px 10px 15px $cart-color;
+        }
+
+        .category {
+            position: absolute;
+            top: 0;
+            margin: 1rem;
+            background-color: $crimson-opacity;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.3rem;
         }
     }
+
+
 
     .btn {
         position: absolute;

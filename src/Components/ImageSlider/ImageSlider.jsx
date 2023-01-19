@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./ImageSlider.scss";
 
-export const ImageSlider = ({ images }) => {
+export const ImageSlider = ({ images, category }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const moveRight = () => {
@@ -29,7 +27,8 @@ export const ImageSlider = ({ images }) => {
         <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
       </svg>
       <div className="images-container">
-        <img src={images[currentIndex]} />
+        <img src={images[currentIndex]} alt={category} />
+        <h3 className="category">{category}</h3>
       </div>
       <svg
         onClick={moveRight}

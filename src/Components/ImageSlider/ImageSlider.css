@@ -3,6 +3,7 @@
 }
 .images-slider .images-container {
   height: 300px;
+  position: relative;
 }
 .images-slider .images-container img {
   display: none;
@@ -11,9 +12,18 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.5rem;
+  box-shadow: 5px 10px 15px #333;
 }
 .images-slider .images-container img:first-child {
   display: block;
+}
+.images-slider .images-container .category {
+  position: absolute;
+  top: 0;
+  margin: 1rem;
+  background-color: rgba(220, 20, 60, 0.4);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.3rem;
 }
 .images-slider .btn {
   position: absolute;

@@ -38,8 +38,7 @@ export const ProductDetails = () => {
     >
       {Object.keys(product).length > 0 ? (
         <>
-          <h3>{category.name}</h3>
-          <ImageSlider images={images} />
+          <ImageSlider images={images} category={category.name} />
           <br />
           <h1>{title}</h1>
           <h2>{FormatCurrency(price)}</h2>
