@@ -34,8 +34,8 @@
   transform: transition(15%, -15%);
 }
 .header-controllers .link-style .animate {
-  -webkit-animation: svg 4s linear infinite;
-          animation: svg 4s linear infinite;
+  -webkit-animation: svg 3s linear infinite;
+          animation: svg 3s linear infinite;
 }
 @-webkit-keyframes svg {
   0% {
@@ -43,7 +43,7 @@
     transition: all 0.3s ease-in-out;
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: all 0.3s ease-in-out;
   }
   100% {
@@ -57,7 +57,7 @@
     transition: all 0.3s ease-in-out;
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: all 0.3s ease-in-out;
   }
   100% {
