@@ -30,12 +30,10 @@
         }
     }
 
-
-
     .btn {
         position: absolute;
         top: 50%;
-        height: 3rem;
+        height: 5rem;
         fill: $fav-color;
         border: none;
         z-index: 1;
@@ -56,6 +54,10 @@
     .images-slider {
         .images-container {
             height: 300px;
+        }
+
+        .btn {
+            height: 3rem;
         }
     }
 }

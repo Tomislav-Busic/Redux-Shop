@@ -30,6 +30,12 @@ export const ProductDetails = () => {
     dispatch(productActions.productDescription());
   };
 
+  const priceStyle = {
+    backgroundColor: "rgba(220, 20, 60, 0.4)",
+    padding: "0 1rem",
+    borderRadius: "0.5rem",
+  };
+
   return (
     <div
       className={`page ${theme && "page-change-background"}`}
@@ -41,7 +47,9 @@ export const ProductDetails = () => {
           <ImageSlider images={images} category={category.name} />
           <br />
           <h1>{title}</h1>
-          <h2>{FormatCurrency(price)}</h2>
+          <br />
+          <h2 style={priceStyle}>{FormatCurrency(price)}</h2>
+          <br />
           {!toggleDescription ? (
             <div className="description">
               <p>{description.substring(0, 20)}...</p>
@@ -61,6 +69,7 @@ export const ProductDetails = () => {
       ) : (
         <h1>Loading...</h1>
       )}
+      <br />
       <ProductFavAndCart product={product} />
     </div>
   );
