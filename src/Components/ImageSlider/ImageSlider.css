@@ -2,7 +2,7 @@
   position: relative;
 }
 .images-slider .images-container {
-  height: 300px;
+  height: 500px;
   position: relative;
 }
 .images-slider .images-container img {
@@ -40,4 +40,10 @@
 }
 .images-slider .btn:last-child {
   right: 0;
+}
+
+@media (max-width: 900px) {
+  .images-slider .images-container {
+    height: 300px;
+  }
 }/*# sourceMappingURL=ImageSlider.css.map */
