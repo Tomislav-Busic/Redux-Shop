@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.price {
+    background-color: $crimson-opacity;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+}
+
+.price-theme {
+    background-color: $cart-color-opacity;
+}

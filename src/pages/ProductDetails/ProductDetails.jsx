@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchProduct } from "../data/data";
-import { productActions } from "../store/slice/product-slice";
+import { fetchProduct } from "../../data/data";
+import { productActions } from "../../store/slice/product-slice";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FormatCurrency } from "../tools/formatCurrency";
-import { ProductFavAndCart } from "../components/ProductFavAndCart/ProductFavAndCart";
-import { ImageSlider } from "../components/ImageSlider/ImageSlider";
+import { FormatCurrency } from "../../tools/formatCurrency";
+import { ProductFavAndCart } from "../../components/ProductFavAndCart/ProductFavAndCart";
+import { ImageSlider } from "../../components/ImageSlider/ImageSlider";
+import "./ProductDetails.scss";
 
 export const ProductDetails = () => {
   const { productId } = useParams();
@@ -30,12 +31,6 @@ export const ProductDetails = () => {
     dispatch(productActions.productDescription());
   };
 
-  const priceStyle = {
-    backgroundColor: "rgba(220, 20, 60, 0.4)",
-    padding: "0 1rem",
-    borderRadius: "0.5rem",
-  };
-
   return (
     <div
       className={`page ${theme && "page-change-background"}`}
@@ -48,12 +43,14 @@ export const ProductDetails = () => {
           <br />
           <h1>{title}</h1>
           <br />
-          <h2 style={priceStyle}>{FormatCurrency(price)}</h2>
+          <h2 className={`price ${theme && "price-theme"}`}>
+            {FormatCurrency(price)}
+          </h2>
           <br />
           {!toggleDescription ? (
             <div className="description">
               <p>{description.substring(0, 20)}...</p>
-              <Button variant="success" onClick={handleDescription}>
+              <Button variant="dark" onClick={handleDescription}>
                 See more
               </Button>
             </div>

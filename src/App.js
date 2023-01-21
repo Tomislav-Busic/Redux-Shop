@@ -14,7 +14,7 @@ import { favoriteActions } from "./store/slice/favorite-slice";
 import { Categories } from "./pages/Categories";
 import { Header } from "./components/Header/Header";
 import { Products } from "./pages/Products";
-import { ProductDetails } from "./pages/ProductDetails";
+import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 import { Cart } from "./components/Cart";
 import { Favorite } from "./components/Favorite";
 import { Footer } from "./components/Footer/Footer";
