@@ -53,6 +53,20 @@
 @media (max-width: "900px") {
     .images-slider {
         .images-container {
+            height: 400px;
+        }
+
+        .btn {
+            height: 4rem;
+        }
+    }
+}
+
+@media (max-width: "700px") {
+    .images-slider {
+        padding-top: 2rem;
+
+        .images-container {
             height: 300px;
         }
 
