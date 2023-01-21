@@ -6,7 +6,7 @@ import { productActions } from "../store/slice/product-slice";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FormatCurrency } from "../tools/formatCurrency";
-import { ProductFavAndCart } from "../components/ProductFavAndCart";
+import { ProductFavAndCart } from "../components/ProductFavAndCart/ProductFavAndCart";
 import { ImageSlider } from "../components/ImageSlider/ImageSlider";
 
 export const ProductDetails = () => {

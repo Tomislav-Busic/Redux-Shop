@@ -44,6 +44,17 @@
 
 @media (max-width: 900px) {
   .images-slider .images-container {
+    height: 400px;
+  }
+  .images-slider .btn {
+    height: 4rem;
+  }
+}
+@media (max-width: 700px) {
+  .images-slider {
+    padding-top: 2rem;
+  }
+  .images-slider .images-container {
     height: 300px;
   }
   .images-slider .btn {

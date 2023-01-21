@@ -1,0 +1,10 @@
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bolder;
+  max-width: 28rem;
+}/*# sourceMappingURL=ProductFavAndCart.css.map */

@@ -17,6 +17,7 @@ import { Products } from "./pages/Products";
 import { ProductDetails } from "./pages/ProductDetails";
 import { Cart } from "./components/Cart";
 import { Favorite } from "./components/Favorite";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const categoryId = useSelector((state) => state.products.categoryId);
@@ -53,11 +54,12 @@ function App() {
   }, [categoryId]);
 
   return (
-    <>
+    <div className="app">
       <Router>
         <Header />
         <Cart />
         <Favorite />
+        <Footer />
         <Routes>
           <Route path="/" element={<Categories />} />
           <Route path="/products" element={<Products />} />
@@ -65,7 +67,7 @@ function App() {
           <Route path="*" element={<Categories />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

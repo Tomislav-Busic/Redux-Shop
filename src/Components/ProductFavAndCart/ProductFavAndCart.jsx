@@ -1,11 +1,12 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FormatCurrency } from "../tools/formatCurrency";
+import "./ProductFavAndCart.scss";
+import { FormatCurrency } from "../../tools/formatCurrency";
 import { useSelector, useDispatch } from "react-redux";
-import { productActions } from "../store/slice/product-slice";
-import { cartActions } from "../store/slice/cart-slice";
-import { favoriteActions } from "../store/slice/favorite-slice";
+import { productActions } from "../../store/slice/product-slice";
+import { cartActions } from "../../store/slice/cart-slice";
+import { favoriteActions } from "../../store/slice/favorite-slice";
 
 export const ProductFavAndCart = ({ product }) => {
   const { id, title, price, images } = product;

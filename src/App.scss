@@ -1,31 +1,26 @@
 @import "./styles/mixsins.scss";
 @import "./styles/variables.scss";
-.page {
-  @include flex-center-column;
-  padding: 4rem 1rem;
-  min-height: 100vh;
-  background-color: $bg-color-pink;
-}
-
-.page-change-background {
-  background-color: $bg-color-whitesmoke;
-}
-
-.cards {
-  padding: 1rem;
-  @include flex-center;
-  flex-wrap: wrap;
-}
-
-.filters {
-  padding: 1rem;
-  @include flex-center-column;
-}
-
-.description {
-  @include flex-center-column;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bolder;
-    max-width: 28rem;
+.app {
+  position: relative;
+  .page {
+      @include flex-center-column;
+      padding: 4rem 1rem;
+      min-height: 100vh;
+      background-color: $bg-color-pink;
+    }
+  
+    .page-change-background {
+      background-color: $bg-color-whitesmoke;
+    }
+  
+    .cards {
+      padding: 1rem;
+      @include flex-center;
+      flex-wrap: wrap;
+    }
+  
+    .filters {
+      padding: 1rem;
+      @include flex-center-column;
+    }
 }

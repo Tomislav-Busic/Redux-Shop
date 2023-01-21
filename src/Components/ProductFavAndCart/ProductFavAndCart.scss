@@ -1,0 +1,9 @@
+@import "../../styles/mixsins.scss";
+
+.description {
+    @include flex-center-column;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    max-width: 28rem;
+}

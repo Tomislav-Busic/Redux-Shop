@@ -1,4 +1,7 @@
-.page {
+.app {
+  position: relative;
+}
+.app .page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,34 +10,20 @@
   min-height: 100vh;
   background-color: pink;
 }
-
-.page-change-background {
+.app .page-change-background {
   background-color: whitesmoke;
 }
-
-.cards {
+.app .cards {
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.filters {
+.app .filters {
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.description {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bolder;
-  max-width: 28rem;
 }/*# sourceMappingURL=App.css.map */
