@@ -1,15 +1,29 @@
+@import "../../styles/variables.scss";
+
 .footer {
     position: absolute;
     margin: 0;
     bottom: 0;
     width: 100%;
-    background-color: #222;
+    background-color: $footer-bg-dark;
 
     p {
         padding: 0.3rem 0;
         margin: 0;
         text-align: center;
-        color: #888;
+        color: $footer-p-dark;
         font-weight: 400;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.footer-theme {
+    background-color: $footer-bg-light;
+
+    p {
+        color: $footer-p-light;
     }
 }

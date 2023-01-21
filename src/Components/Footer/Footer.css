@@ -11,4 +11,14 @@
   text-align: center;
   color: #888;
   font-weight: 400;
+}
+.footer p a {
+  text-decoration: none;
+}
+
+.footer-theme {
+  background-color: #f5f5f5;
+}
+.footer-theme p {
+  color: #444;
 }/*# sourceMappingURL=Footer.css.map */
