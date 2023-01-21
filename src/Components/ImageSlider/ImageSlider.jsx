@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import "./ImageSlider.scss";
 
 export const ImageSlider = ({ images, category }) => {
+  const theme = useSelector((state) => state.theme.themeState);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const moveRight = () => {
@@ -20,7 +22,7 @@ export const ImageSlider = ({ images, category }) => {
     <div className="images-slider">
       <svg
         onClick={moveLeft}
-        className="btn"
+        className={`btn ${theme && "btn-theme"}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 384 512"
       >
@@ -28,11 +30,11 @@ export const ImageSlider = ({ images, category }) => {
       </svg>
       <div className="images-container">
         <img src={images[currentIndex]} alt={category} />
-        <h3 className="category">{category}</h3>
+        <h3 className={`category ${theme && "category-theme"}`}>{category}</h3>
       </div>
       <svg
         onClick={moveRight}
-        className="btn"
+        className={`btn ${theme && "btn-theme"}`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 384 512"
       >

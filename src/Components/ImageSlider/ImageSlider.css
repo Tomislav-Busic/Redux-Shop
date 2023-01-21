@@ -20,10 +20,14 @@
 .images-slider .images-container .category {
   position: absolute;
   top: 0;
+  right: 0;
   margin: 1rem;
   background-color: rgba(220, 20, 60, 0.4);
   padding: 0.1rem 0.2rem;
   border-radius: 0.3rem;
+}
+.images-slider .images-container .category-theme {
+  background-color: rgba(255, 215, 0, 0.4);
 }
 .images-slider .btn {
   position: absolute;
@@ -40,6 +44,9 @@
 }
 .images-slider .btn:last-child {
   right: 0;
+}
+.images-slider .btn-theme {
+  fill: gold;
 }
 
 @media (max-width: 900px) {
