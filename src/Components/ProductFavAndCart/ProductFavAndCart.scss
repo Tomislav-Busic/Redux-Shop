@@ -1,4 +1,5 @@
 @import "../../styles/mixsins.scss";
+@import "../../styles/variables.scss";
 
 .description {
     @include flex-center-column;
@@ -6,4 +7,23 @@
     font-size: 1rem;
     font-weight: bolder;
     max-width: 28rem;
+}
+
+
+.controllers-c-f {
+    display: flex;
+    justify-content: baseline;
+    margin-top: 1rem;
+
+
+
+    .btn-cart svg {
+        height: 1.7rem;
+        fill: $cart-color-header;
+    }
+
+    .btn-fav svg {
+        height: 1.7rem;
+        fill: $fav-color;
+    }
 }

@@ -32,11 +32,7 @@ export const ProductDetails = () => {
   };
 
   return (
-    <div
-      className={`page ${theme && "page-change-background"}`}
-      style={{ textAlign: "center" }}
-      key={id}
-    >
+    <div className={`page ${theme && "page-change-background"}`} key={id}>
       {Object.keys(product).length > 0 ? (
         <>
           <ImageSlider images={images} category={category.name} />

@@ -7,4 +7,18 @@
   font-size: 1rem;
   font-weight: bolder;
   max-width: 28rem;
+}
+
+.controllers-c-f {
+  display: flex;
+  justify-content: baseline;
+  margin-top: 1rem;
+}
+.controllers-c-f .btn-cart svg {
+  height: 1.7rem;
+  fill: gold;
+}
+.controllers-c-f .btn-fav svg {
+  height: 1.7rem;
+  fill: crimson;
 }/*# sourceMappingURL=ProductFavAndCart.css.map */
