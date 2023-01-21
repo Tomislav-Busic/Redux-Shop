@@ -5,7 +5,7 @@ The application consists of a category page where a category can be selected.
 The product page provides many options where you can choose other categories or "All products". 
 Products can be sorted by price, filtered by name, put in the cart or among favorites, change the background image of the card and see product details. 
 In the product details there is an image slider, name, dynamic details, and cart options where you can manage the quantity and add to favorites. 
-On top of all that is the header and footer. In the header there are links and an animated card and favorites if they are filled. There is also a theme changer.
+On top of all that is the header and footer. In the header there are links and an animated cart and favorites if they are filled. There is also a theme changer.
 In the footer there is today's date and a link. 
 Content can also be managed in the cart and favorites. Most of this takes place in the Redux-toolkit in the store folder. 
 All data from the shopping cart and favorites are saved in local storage so that they are not lost when the page is refreshed. 
