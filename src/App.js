@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.scss";
 import "antd/dist/reset.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllProducts,
@@ -64,7 +64,6 @@ function App() {
           <Route path="/" element={<Categories />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
-          <Route path="*" element={<Categories />} />
         </Routes>
       </Router>
     </div>
