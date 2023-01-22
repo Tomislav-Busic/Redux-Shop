@@ -1,9 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Filters from "../components/Filters";
-import { CardProduct } from "../components/CardProduct/CardProduct";
+import Filters from "../../components/Filters";
+import { CardProduct } from "../../components/CardProduct/CardProduct";
 import { Pagination } from "antd";
-import { usePagination } from "../hooks/usePagination";
+import { usePagination } from "../../hooks/usePagination";
+import "./Products.scss";
 
 export const Products = () => {
   const theme = useSelector((state) => state.theme.themeState);
@@ -21,7 +22,7 @@ export const Products = () => {
 
   return (
     <div className={`page ${theme && "page-change-background"}`}>
-      <h1>Products</h1>
+      <h1 className={`heading ${theme && "heading-theme"}`}>Products</h1>
       <Filters />
       <div className="cards">
         {products?.length > 0 ? (

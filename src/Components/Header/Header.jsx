@@ -11,8 +11,8 @@ export const Header = () => {
 
   return (
     <Navbar
-      bg={!themeState ? "dark" : "light"}
-      variant={!themeState ? "dark" : "light"}
+      bg={!themeState ? "dark" : "secondary"}
+      variant={!themeState ? "dark" : "secondary"}
       fixed="top"
     >
       <Container className="d-flex flex-wrap">

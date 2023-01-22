@@ -11,9 +11,9 @@ import {
 import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
 
-import { Categories } from "./pages/Categories";
+import { Categories } from "./pages/Categories/Categories";
 import { Header } from "./components/Header/Header";
-import { Products } from "./pages/Products";
+import { Products } from "./pages/Products/Products";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 import { Cart } from "./components/Cart";
 import { Favorite } from "./components/Favorite";

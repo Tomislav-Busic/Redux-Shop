@@ -1,0 +1,9 @@
+@import "../../styles/mixsins.scss";
+
+.heading {
+    @include heading;
+}
+
+.heading-theme {
+    @include heading-theme
+}

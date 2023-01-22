@@ -1,11 +1,29 @@
 @import "../../styles/variables.scss";
 
+.heading-price {
+    color: $bg-color-whitesmoke;
+}
+
+.heading-price-theme {
+    color: $footer-bg-dark;
+}
 .price {
-    background-color: $crimson-opacity;
+    background-color: $footer-bg-dark;
+        color: $bg-color-whitesmoke;
     padding: 0 1rem;
     border-radius: 0.5rem;
 }
 
 .price-theme {
     background-color: $cart-color-opacity;
+    color: $footer-bg-dark;
+    }
+    
+    .description {
+        color: $bg-color-whitesmoke;
+        font-size: 1.1rem;
+    }
+    
+    .description-theme {
+        color: $footer-bg-dark
 }

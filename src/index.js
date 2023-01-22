@@ -26,4 +26,5 @@ npm i antd
 npm i sass
 npm i gh-pages --save-dev
 npm run deploy
+npm i framer-motion
 */

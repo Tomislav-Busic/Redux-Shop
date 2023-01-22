@@ -6,11 +6,11 @@
       @include flex-center-column;
       padding: 4rem 1rem;
       min-height: 100vh;
-      background-color: $bg-color-pink;
+      @include theme-background;
     }
   
     .page-change-background {
-      background-color: $bg-color-whitesmoke;
+      @include theme-background-change;
     }
   
     .cards {
