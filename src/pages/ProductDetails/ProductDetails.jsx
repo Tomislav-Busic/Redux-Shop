@@ -9,6 +9,7 @@ import { FormatCurrency } from "../../tools/formatCurrency";
 import { ProductFavAndCart } from "../../components/ProductFavAndCart/ProductFavAndCart";
 import { ImageSlider } from "../../components/ImageSlider/ImageSlider";
 import "./ProductDetails.scss";
+import { motion } from "framer-motion";
 
 export const ProductDetails = () => {
   const { productId } = useParams();
@@ -32,7 +33,14 @@ export const ProductDetails = () => {
   };
 
   return (
-    <div className={`page ${theme && "page-change-background"}`} key={id}>
+    <motion.div
+      className={`page ${theme && "page-change-background"}`}
+      key={id}
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth }}
+      transition={{ duration: 0.3 }}
+    >
       {Object.keys(product).length > 0 ? (
         <>
           <ImageSlider images={images} category={category.name} />
@@ -69,6 +77,6 @@ export const ProductDetails = () => {
       )}
       <br />
       <ProductFavAndCart product={product} />
-    </div>
+    </motion.div>
   );
 };

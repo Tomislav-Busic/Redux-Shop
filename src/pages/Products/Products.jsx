@@ -5,6 +5,7 @@ import { CardProduct } from "../../components/CardProduct/CardProduct";
 import { Pagination } from "antd";
 import { usePagination } from "../../hooks/usePagination";
 import "./Products.scss";
+import { motion } from "framer-motion";
 
 export const Products = () => {
   const theme = useSelector((state) => state.theme.themeState);
@@ -21,7 +22,13 @@ export const Products = () => {
   const total = products.length;
 
   return (
-    <div className={`page ${theme && "page-change-background"}`}>
+    <motion.div
+      className={`page ${theme && "page-change-background"}`}
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth }}
+      transition={{ duration: 0.3 }}
+    >
       <h1 className={`heading ${theme && "heading-theme"}`}>Products</h1>
       <Filters />
       <div className="cards">
@@ -50,6 +57,6 @@ export const Products = () => {
         onShowSizeChange={onShowSizeChange}
         /* itemRender={itemRender} */
       />
-    </div>
+    </motion.div>
   );
 };
