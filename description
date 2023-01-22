@@ -10,4 +10,5 @@ In the footer there is today's date and a link.
 Content can also be managed in the cart and favorites. Most of this takes place in the Redux-toolkit in the store folder. 
 All data from the shopping cart and favorites are saved in local storage so that they are not lost when the page is refreshed. 
 The site is responsive and contains pagination. 
+I made several animations, for example for the title. I used framer-motion to transition between pages
 Briefly...
