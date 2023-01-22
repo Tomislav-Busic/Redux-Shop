@@ -2,6 +2,7 @@
 @import "./styles/variables.scss";
 .app {
   position: relative;
+  min-height: 100vh;
   .page {
       @include flex-center-column;
       padding: 4rem 1rem;

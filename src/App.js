@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.scss";
 import "antd/dist/reset.css";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllProducts,
@@ -11,13 +10,11 @@ import {
 import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
 
-import { Categories } from "./pages/Categories/Categories";
 import { Header } from "./components/Header/Header";
-import { Products } from "./pages/Products/Products";
-import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 import { Cart } from "./components/Cart";
 import { Favorite } from "./components/Favorite";
 import { Footer } from "./components/Footer/Footer";
+import { AnimatedRoutes } from "./components/AnimatedRoutes/AnimatedRoutes";
 
 function App() {
   const categoryId = useSelector((state) => state.products.categoryId);
@@ -55,17 +52,13 @@ function App() {
 
   return (
     <div className="app">
-      <Router>
+      <>
         <Header />
         <Cart />
         <Favorite />
         <Footer />
-        <Routes>
-          <Route path="/" element={<Categories />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product/:productId" element={<ProductDetails />} />
-        </Routes>
-      </Router>
+        <AnimatedRoutes />
+      </>
     </div>
   );
 }
