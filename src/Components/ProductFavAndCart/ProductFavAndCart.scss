@@ -15,8 +15,6 @@
     justify-content: baseline;
     margin-top: 1rem;
 
-
-
     .btn-cart svg {
         height: 1.7rem;
         fill: $cart-color-header;
@@ -26,4 +24,12 @@
         height: 1.7rem;
         fill: $fav-color;
     }
+}
+
+.total-price {
+    color: $bg-color-whitesmoke;
+}
+
+.total-price-theme {
+    color: $footer-bg-dark;
 }

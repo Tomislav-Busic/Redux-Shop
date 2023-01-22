@@ -49,7 +49,7 @@ export const ProductDetails = () => {
             <div className={`description ${theme && "description-theme"}`}>
               <p>{description.substring(0, 20)}...</p>
               <Button
-                variant={theme ? "dark" : "light"}
+                variant={theme ? "dark" : "secondary"}
                 onClick={handleDescription}
               >
                 See more

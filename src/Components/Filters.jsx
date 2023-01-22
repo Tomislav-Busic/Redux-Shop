@@ -7,6 +7,7 @@ import { CategoryMenu } from "./CategoryMenu";
 
 const Filters = () => {
   const categoryId = useSelector((state) => state.products.categoryId);
+  const theme = useSelector((state) => state.theme.themeState);
   const categoryOptions = useSelector(
     (state) => state.categories.categoriesList
   );
@@ -27,7 +28,9 @@ const Filters = () => {
   return (
     <div className="filters">
       <Button
-        variant={categoryId !== null ? "danger" : "warning"}
+        variant={
+          categoryId !== null ? (theme ? "danger" : "secondary") : "warning"
+        }
         onClick={showAllProducts}
       >
         All Products

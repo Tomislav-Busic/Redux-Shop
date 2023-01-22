@@ -62,11 +62,16 @@ export const ProductFavAndCart = ({ product }) => {
     <div className="d-flex flex-column align-items-center">
       {thisProduct && toggleProductCart && (
         <div className="d-flex m-2">
-          <Button variant="success" onClick={removeFromCart}>
+          <Button
+            variant={theme ? "success" : "warning"}
+            onClick={removeFromCart}
+          >
             -
           </Button>
-          <h4 className="m-1">{FormatCurrency(thisProduct?.totalPrice)}</h4>
-          <Button variant="success" onClick={addToCart}>
+          <h4 className={`m-1 total-price ${theme && "total-price-theme"}`}>
+            {FormatCurrency(thisProduct?.totalPrice)}
+          </h4>
+          <Button variant={theme ? "success" : "warning"} onClick={addToCart}>
             +
           </Button>
         </div>
