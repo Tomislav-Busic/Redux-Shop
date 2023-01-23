@@ -52,13 +52,11 @@ function App() {
 
   return (
     <div className="app">
-      <>
-        <Header />
-        <Cart />
-        <Favorite />
-        <Footer />
-        <AnimatedRoutes />
-      </>
+      <Header />
+      <Cart />
+      <Favorite />
+      <Footer />
+      <AnimatedRoutes />
     </div>
   );
 }

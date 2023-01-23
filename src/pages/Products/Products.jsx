@@ -27,7 +27,7 @@ export const Products = () => {
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.2 }}
     >
       <h1 className={`heading ${theme && "heading-theme"}`}>Products</h1>
       <Filters />
