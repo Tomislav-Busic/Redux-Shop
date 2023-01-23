@@ -1,8 +1,4 @@
 .heading-price {
-  color: rgb(245, 245, 245);
-}
-
-.heading-price-theme {
   color: #332d2d;
 }
 
@@ -17,12 +13,7 @@
   background-color: rgba(255, 215, 0, 0.7);
   color: #332d2d;
 }
-
-.description {
-  color: rgb(245, 245, 245);
-  font-size: 1.1rem;
-}
-
-.description-theme {
+.price-theme .description {
   color: #332d2d;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=ProductDetails.css.map */

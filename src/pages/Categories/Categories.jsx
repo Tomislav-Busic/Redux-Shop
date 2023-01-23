@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { CardCategory } from "../../components/CardCategory";
+import { CardCategory } from "../../components/CardCategory/CardCategory";
 import { motion } from "framer-motion";
 
 export const Categories = () => {

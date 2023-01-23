@@ -63,15 +63,15 @@ export const ProductFavAndCart = ({ product }) => {
       {thisProduct && toggleProductCart && (
         <div className="d-flex m-2">
           <Button
-            variant={theme ? "success" : "warning"}
+            variant={theme ? "success" : "danger"}
             onClick={removeFromCart}
           >
             -
           </Button>
-          <h4 className={`m-1 total-price ${theme && "total-price-theme"}`}>
+          <h4 className="m-1 total-price">
             {FormatCurrency(thisProduct?.totalPrice)}
           </h4>
-          <Button variant={theme ? "success" : "warning"} onClick={addToCart}>
+          <Button variant={theme ? "success" : "danger"} onClick={addToCart}>
             +
           </Button>
         </div>

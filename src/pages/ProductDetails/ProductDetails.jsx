@@ -45,9 +45,7 @@ export const ProductDetails = () => {
         <>
           <ImageSlider images={images} category={category.name} />
           <br />
-          <h1 className={`heading-price ${theme && "heading-price-theme"}`}>
-            {title}
-          </h1>
+          <h1 className="heading-price">{title}</h1>
           <br />
           <h2 className={`price ${theme && "price-theme"}`}>
             {FormatCurrency(price)}
@@ -64,7 +62,7 @@ export const ProductDetails = () => {
               </Button>
             </div>
           ) : (
-            <div className={`description ${theme && "description-theme"}`}>
+            <div className="description">
               <p>{description}</p>
               <Button variant="secondary" onClick={handleDescription}>
                 See less

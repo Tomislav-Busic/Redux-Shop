@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./CardCategory.scss";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { productsActions } from "../store/slice/products-slice";
+import { productsActions } from "../../store/slice/products-slice";
 
 export const CardCategory = ({ category }) => {
   const theme = useSelector((state) => state.theme.themeState);
@@ -17,7 +18,7 @@ export const CardCategory = ({ category }) => {
   return (
     <Card
       style={{ width: "18rem", margin: "1rem" }}
-      className="border-secondary"
+      className="border-secondary card"
     >
       <Card.Img variant="top" src={image} alt={name} />
       <Card.Body>
