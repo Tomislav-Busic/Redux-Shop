@@ -2,8 +2,8 @@ import React from "react";
 import { Form, InputGroup, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
-import { productsActions } from "../store/slice/products-slice";
-import { CategoryMenu } from "./CategoryMenu";
+import { productsActions } from "../../store/slice/products-slice";
+import { ProductsMenu } from "../ProductsMenu/ProductsMenu";
 
 const Filters = () => {
   const categoryId = useSelector((state) => state.products.categoryId);
@@ -27,17 +27,23 @@ const Filters = () => {
 
   return (
     <div className="filters">
-      <Button
-        variant={
-          categoryId !== null ? (theme ? "dark" : "secondary") : "warning"
-        }
-        onClick={showAllProducts}
-      >
-        All Products
-      </Button>
       <div className="cards">
+        <p
+          onClick={showAllProducts}
+          className={`category ${
+            categoryId !== null
+              ? theme
+                ? "theme"
+                : ""
+              : theme
+              ? "theme active-theme"
+              : "active"
+          }`}
+        >
+          All Products
+        </p>
         {categoryOptions.map((option) => (
-          <CategoryMenu option={option} key={option.id} />
+          <ProductsMenu option={option} key={option.id} />
         ))}
       </div>
       <InputGroup className="mb-3">

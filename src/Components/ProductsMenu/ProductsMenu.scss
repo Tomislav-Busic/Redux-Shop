@@ -1,0 +1,18 @@
+@import "../../styles/mixsins.scss";
+@import "../../styles/variables.scss";
+
+.category {
+    @include header-category;
+}
+
+.active {
+    @include header-active;
+}
+
+.theme {
+    @include header-theme;
+}
+
+.active-theme {
+    @include header-active-theme;
+}

@@ -43,12 +43,14 @@ export const CardProduct = ({ product }) => {
   return (
     <Card
       key={id}
-      className={`card-product ${
-        !theme ? "border-secondary" : "border-warning"
-      }`}
+      className={`card-product ${!theme ? "border-secondary" : "border-dark"}`}
     >
       <Card.Img className="img-card" variant="top" src={image} />
-      <Button className="category-btn" size="sm" variant="warning">
+      <Button
+        className="category-btn border-secondary"
+        size="sm"
+        variant="light"
+      >
         {category.name}
       </Button>
       <div className="img-change">
@@ -67,7 +69,7 @@ export const CardProduct = ({ product }) => {
         <Card.Text>{FormatCurrency(price)}</Card.Text>
         <div className="d-flex">
           <Link to={`/product/${id}`}>
-            <Button variant={!theme ? "secondary" : "warning"}>See more</Button>
+            <Button variant={!theme ? "secondary" : "dark"}>See more</Button>
           </Link>
           <div className="svg-container">
             <Link onClick={addToCart}>

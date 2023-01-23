@@ -13,11 +13,11 @@
 
 @mixin theme-background {
     background: #F0F2F0;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);
-            /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #000C40, #F0F2F0);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F0F2F0, #000C40);
+        /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F0F2F0, #000C40);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @mixin theme-background-change {
@@ -237,4 +237,40 @@
         }
     }
 
+}
+@mixin header-category {
+    margin: 0.5rem;
+    padding: 0.2rem 0.7rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    color: $bg-color-whitesmoke;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    @media (max-width: "900px") {
+        font-size: 1rem;
+        margin: 0.3rem;
+    }
+
+    @media (max-width: "700px") {
+        font-size: 0.8rem;
+        margin: 0.5rem 0.1rem;
+    }
+}
+
+@mixin header-active {
+    background-color: $bg-color-whitesmoke;
+    color: $footer-bg-dark;
+    box-shadow: 5px 5px 10px $footer-bg-light;
+}
+
+@mixin header-theme {
+    color: $footer-bg-dark;
+}
+
+@mixin header-active-theme {
+    background-color: $footer-bg-dark;
+    color: $bg-color-whitesmoke;
+    box-shadow: 5px 5px 10px $footer-bg-dark;
 }
