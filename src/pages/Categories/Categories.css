@@ -153,7 +153,7 @@
   border-radius: 1rem;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  color: #93969d;
+  color: #444;
   position: relative;
   text-align: center;
 }
@@ -164,7 +164,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #93969d;
+  background-color: #444;
   -webkit-animation: headingbefore 13s linear infinite;
           animation: headingbefore 13s linear infinite;
   transition: all 0.4s ease-in-out 0s;
@@ -176,7 +176,7 @@
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #93969d;
+  background-color: #444;
   -webkit-animation: headingafter 13s linear infinite;
           animation: headingafter 13s linear infinite;
   transition: all 0.4s ease-in-out 0s;

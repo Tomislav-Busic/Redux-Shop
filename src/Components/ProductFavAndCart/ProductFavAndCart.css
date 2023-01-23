@@ -21,4 +21,12 @@
 .controllers-c-f .btn-fav svg {
   height: 1.7rem;
   fill: crimson;
+}
+
+.total-price {
+  color: rgb(245, 245, 245);
+}
+
+.total-price-theme {
+  color: #332d2d;
 }/*# sourceMappingURL=ProductFavAndCart.css.map */

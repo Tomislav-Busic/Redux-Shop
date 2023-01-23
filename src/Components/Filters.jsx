@@ -29,7 +29,7 @@ const Filters = () => {
     <div className="filters">
       <Button
         variant={
-          categoryId !== null ? (theme ? "danger" : "secondary") : "warning"
+          categoryId !== null ? (theme ? "dark" : "secondary") : "warning"
         }
         onClick={showAllProducts}
       >
