@@ -60,6 +60,8 @@ export const cartSlice = createSlice({
     },
     clearCartItems(state, action) {
       state.cartList = [];
+      state.totalQuantity = 0;
+      state.isOpen = !state.isOpen;
     },
   },
 });

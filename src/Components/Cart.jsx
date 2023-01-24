@@ -20,34 +20,48 @@ export const Cart = () => {
   };
 
   return (
-    <Offcanvas show={isOpen} onHide={handleToggle} placement="end">
+    <Offcanvas
+      style={{ textAlign: "center" }}
+      show={isOpen}
+      onHide={handleToggle}
+      placement="end"
+    >
       <Offcanvas.Header closeButton>Cart</Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
           {cartItems?.length > 0 ? (
             cartItems?.map((item) => <CartItem item={item} key={item.id} />)
           ) : (
-            <h1>
+            <h3>
               You have no products in your cart yet, please choose some from{" "}
               <Link to="/products">
-                <Button onClick={handleToggle}> Products</Button>
+                <Button variant="primary" size="sm" onClick={handleToggle}>
+                  {" "}
+                  Products
+                </Button>
               </Link>
-            </h1>
+            </h3>
           )}
-          <div className="ms-auto fw-bold fs-4">
-            Total {FormatCurrency(total)}
-          </div>
-          <StripeBtn price={total} />
-          <div>
-            <br />
-            <br />
-            <h5>
-              To test payment functionality Stripe provides dummy card details
-              which you can fill to test:
-            </h5>
-            <br />
-            <h2>4242 4242 4242 4242 - Exp: 01/28 - CVV: 123</h2>
-          </div>
+          {total > 0 ? (
+            <>
+              <div className="ms-auto fw-bold fs-4">
+                Total {FormatCurrency(total)}
+              </div>
+              <StripeBtn price={total} />
+              <div>
+                <br />
+                <br />
+                <h5>
+                  To test payment functionality Stripe provides dummy card
+                  details which you can fill to test:
+                </h5>
+                <br />
+                <h2>4242 4242 4242 4242 - Exp: 01/28 - CVV: 123</h2>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>
