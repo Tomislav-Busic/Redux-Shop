@@ -16,19 +16,27 @@ export const Favorite = () => {
   };
 
   return (
-    <Offcanvas show={isOpen} onHide={handleToggle} placement="end">
+    <Offcanvas
+      style={{ textAlign: "center" }}
+      show={isOpen}
+      onHide={handleToggle}
+      placement="end"
+    >
       <Offcanvas.Header closeButton>Favorite</Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
           {favItems?.length > 0 ? (
             favItems?.map((item) => <FavItems item={item} key={item.id} />)
           ) : (
-            <h1>
+            <h3>
               You have no products in your favorite yet, please choose some from{" "}
               <Link to="/products">
-                <Button onClick={handleToggle}> Products</Button>
+                <Button size="sm" onClick={handleToggle}>
+                  {" "}
+                  Products
+                </Button>
               </Link>
-            </h1>
+            </h3>
           )}
         </Stack>
       </Offcanvas.Body>
