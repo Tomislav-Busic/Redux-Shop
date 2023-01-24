@@ -30,4 +30,5 @@ npm i sass
 npm i gh-pages --save-dev
 npm run deploy
 npm i framer-motion
+npm install react-stripe-checkout
 */

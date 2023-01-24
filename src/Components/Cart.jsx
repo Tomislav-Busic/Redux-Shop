@@ -6,6 +6,7 @@ import { cartActions } from "../store/slice/cart-slice";
 import { CartItem } from "./CartItem";
 import { Link } from "react-router-dom";
 import { FormatCurrency } from "../tools/formatCurrency";
+import { StripeBtn } from "./StripeBtn/StripeBtn";
 
 export const Cart = () => {
   let total = 0;
@@ -13,6 +14,7 @@ export const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartList);
   const dispatch = useDispatch();
   cartItems?.forEach((item) => (total += item.totalPrice));
+
   const handleToggle = () => {
     dispatch(cartActions.toggleCart());
   };
@@ -35,7 +37,17 @@ export const Cart = () => {
           <div className="ms-auto fw-bold fs-4">
             Total {FormatCurrency(total)}
           </div>
-          <Button variant="success">Buy</Button>
+          <StripeBtn price={total} />
+          <div>
+            <br />
+            <br />
+            <h5>
+              To test payment functionality Stripe provides dummy card details
+              which you can fill to test:
+            </h5>
+            <br />
+            <h2>4242 4242 4242 4242 - Exp: 01/28 - CVV: 123</h2>
+          </div>
         </Stack>
       </Offcanvas.Body>
     </Offcanvas>
