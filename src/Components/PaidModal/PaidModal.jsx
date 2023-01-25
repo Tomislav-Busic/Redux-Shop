@@ -3,7 +3,6 @@ import { Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./PaidModal.scss";
 import { stripeActions } from "../../store/slice/stripe-slice";
-import { cartActions } from "../../store/slice/cart-slice";
 import { useDispatch } from "react-redux";
 
 export const PaidModal = () => {
@@ -11,7 +10,6 @@ export const PaidModal = () => {
 
   const closeModal = () => {
     dispatch(stripeActions.closeModal());
-    dispatch(cartActions.clearCartItems());
   };
 
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 import logo from "../../logo/LogoMakr-1306Is.png";
+import { cartActions } from "../../store/slice/cart-slice";
 import { stripeActions } from "../../store/slice/stripe-slice";
 import { useDispatch } from "react-redux";
 
@@ -12,6 +13,7 @@ export const StripeBtn = ({ price }) => {
 
   const onToken = (token) => {
     console.log(token);
+    dispatch(cartActions.clearCartItems());
     dispatch(stripeActions.handleStripe(token));
   };
 
