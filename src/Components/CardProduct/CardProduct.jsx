@@ -47,7 +47,7 @@ export const CardProduct = ({ product }) => {
     >
       <Card.Img className="img-card" variant="top" src={image} />
       <Button
-        className="category-btn border-secondary"
+        className="category-btn border-secondary px-2"
         size="sm"
         variant="light"
       >

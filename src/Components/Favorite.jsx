@@ -22,7 +22,7 @@ export const Favorite = () => {
       onHide={handleToggle}
       placement="end"
     >
-      <Offcanvas.Header closeButton>Favorite</Offcanvas.Header>
+      <Offcanvas.Header closeButton>Favorites</Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
           {favItems?.length > 0 ? (

@@ -12,7 +12,6 @@ export const StripeBtn = ({ price }) => {
 
   const onToken = (token) => {
     console.log(token);
-    alert("Payment Succesful!");
     dispatch(cartActions.clearCartItems());
   };
 

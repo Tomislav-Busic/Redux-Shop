@@ -16,11 +16,8 @@ export const CardCategory = ({ category }) => {
   };
 
   return (
-    <Card
-      style={{ width: "18rem", margin: "1rem" }}
-      className="border-secondary card"
-    >
-      <Card.Img variant="top" src={image} alt={name} />
+    <Card className="border-secondary card">
+      <Card.Img className="card-img" variant="top" src={image} alt={name} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Link to={"products"}>

@@ -1,3 +1,11 @@
 .card {
+  width: 18rem;
+  margin: 1rem;
   box-shadow: 5px 15px 15px #332d2d;
+}
+.card .card-img {
+  height: 13rem;
+  max-height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=CardCategory.css.map */
