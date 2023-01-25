@@ -4,24 +4,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./PaidModal.scss";
 import { stripeActions } from "../../store/slice/stripe-slice";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export const PaidModal = () => {
+  const user = useSelector((state) => state.stripe.stripeData);
   const dispatch = useDispatch();
-
   const closeModal = () => {
     dispatch(stripeActions.closeModal());
   };
 
   return (
-    <Card style={{ width: "18rem" }} className="card-modal">
+    <Card style={{ width: "20rem" }} className="card-modal">
       <Card.Body>
         <Card.Title>Payment Succesful!</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        <Card.Text className="m-2">
+          <p>{user.card.name}</p>
+          <p>{user.email}</p>
+          <p>{user.card.address_city}</p>
+          <p>{user.card.address_country}</p>
+          <p>{user.card.address_line1}</p>
         </Card.Text>
         <Button variant="success" onClick={closeModal}>
-          Go somewhere
+          Close
         </Button>
       </Card.Body>
     </Card>

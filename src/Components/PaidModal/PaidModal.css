@@ -8,6 +8,9 @@
   margin: auto;
   text-align: center;
 }
+.card-modal p {
+  margin: 0;
+}
 
 .overlay {
   position: fixed;
