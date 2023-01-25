@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./ProductsMenu.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { productsActions } from "../../store/slice/products-slice";
+import { paginationActions } from "../../store/slice/pagination-slice";
 
 export const ProductsMenu = ({ option }) => {
   const { id, name } = option;
@@ -11,6 +12,7 @@ export const ProductsMenu = ({ option }) => {
   const dispatch = useDispatch();
   const choseCategory = () => {
     dispatch(productsActions.showProductsByCategory(id));
+    dispatch(paginationActions.startPage());
   };
 
   return (

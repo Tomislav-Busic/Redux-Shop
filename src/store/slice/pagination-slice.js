@@ -13,6 +13,9 @@ export const paginationSlice = createSlice({
     setProductsPerPage(state, action) {
       state.productsPerPage = action.payload;
     },
+    startPage(state, action) {
+      state.page = 1;
+    },
   },
 });
 

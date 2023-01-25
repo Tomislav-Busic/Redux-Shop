@@ -3,6 +3,7 @@ import { Form, InputGroup, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import { productsActions } from "../../store/slice/products-slice";
+import { paginationActions } from "../../store/slice/pagination-slice";
 import { ProductsMenu } from "../ProductsMenu/ProductsMenu";
 
 const Filters = () => {
@@ -15,6 +16,7 @@ const Filters = () => {
 
   const showAllProducts = () => {
     dispatch(productsActions.showAllProducts(true));
+    dispatch(paginationActions.startPage());
   };
 
   const handleSortByPrice = (value) => {
