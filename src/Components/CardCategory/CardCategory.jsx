@@ -18,8 +18,12 @@ export const CardCategory = ({ category }) => {
   return (
     <Card className="border-secondary card">
       <Card.Img className="card-img" variant="top" src={image} alt={name} />
+      <Card.Title className="name">
+        <div className="name-container">
+          <p>{name}</p>
+        </div>
+      </Card.Title>
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
         <Link to={"products"}>
           <Button
             variant={!theme ? "dark" : "secondary"}

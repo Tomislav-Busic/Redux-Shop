@@ -1,13 +1,35 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixsins.scss";
 
 .card {
     width: 18rem;
     margin: 1rem;
     box-shadow: 5px 15px 15px $footer-bg-dark;
+    position: relative;
 
     .card-img {
         height: 13rem;
         max-height: 13rem;
         object-fit: cover;
+    }
+
+    .name-container {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: $footer-bg-dark-opacity;
+        border-radius: 0.5rem;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+
+        p {
+            margin: 0;
+            padding: 1rem 3rem;
+            text-transform: capitalize;
+            color: $bg-color-whitesmoke;
+            @include animate-card-category;
+        }
     }
 }

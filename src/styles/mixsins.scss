@@ -67,34 +67,29 @@
             top: 0;
             right: 0;
             height: 100%;
-            transition: all 0.3s ease-in-out;
         }
 
         25% {
             bottom: 0;
             height: 0;
-            transition: all 0.3s ease-in-out;
         }
 
         50% {
             bottom: 0;
             left: 0;
             height: 100%;
-            transition: all 0.3s ease-in-out;
         }
 
         75% {
             top: 0;
             right: 0;
             height: 0;
-            transition: all 0.3s ease-in-out;
         }
 
         100% {
             top: 0;
             right: 0;
             height: 100%;
-            transition: all 0.3s ease-in-out;
         }
     }
 
@@ -104,31 +99,26 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            transition: all 0.3s ease-in-out;
         }
 
         25% {
             right: 0;
             width: 0;
-            transition: all 0.3s ease-in-out;
         }
 
         50% {
             top: 0;
             width: 100%;
-            transition: all 0.3s ease-in-out;
         }
 
         75% {
             bottom: 0;
             width: 0;
-            transition: all 0.3s ease-in-out;
         }
 
         100% {
             left: 0;
             width: 100%;
-            transition: all 0.3s ease-in-out;
         }
     }
 
@@ -172,34 +162,29 @@
             top: 0;
             right: 0;
             height: 100%;
-            transition: all 0.3s ease-in-out;
         }
 
         25% {
             bottom: 0;
             height: 0;
-            transition: all 0.3s ease-in-out;
         }
 
         50% {
             bottom: 0;
             left: 0;
             height: 100%;
-            transition: all 0.3s ease-in-out;
         }
 
         75% {
             top: 0;
             right: 0;
             height: 0;
-            transition: all 0.3s ease-in-out;
         }
 
         100% {
             top: 0;
             right: 0;
             height: 100%;
-            transition: all 0.3s ease-in-out;
         }
     }
 
@@ -273,4 +258,48 @@
     background-color: $footer-bg-dark;
     color: $bg-color-whitesmoke;
     box-shadow: 5px 5px 10px $footer-bg-dark;
+}
+@mixin animate-card-category {
+    transform: rotateY(0);
+    letter-spacing: 0px;
+    animation: category-name 20s linear infinite;
+    transition: all 1s ease-in-out;
+
+    @keyframes category-name {
+        0% {
+            letter-spacing: 0px;
+            transform: rotateY(0);
+            padding: 1rem 3rem;
+        }
+
+        20% {
+            letter-spacing: 5px;
+            transform: rotateY(0);
+            padding: 1rem 1rem;
+        }
+
+        40% {
+            letter-spacing: 0px;
+            transform: rotateY(0);
+            padding: 1rem 3rem;
+        }
+
+        60% {
+            letter-spacing: 0px;
+            transform: rotateY(360deg);
+            padding: 1rem 3rem;
+        }
+
+        80% {
+            letter-spacing: 0px;
+            transform: rotateY(0);
+            padding: 1rem 3rem;
+        }
+
+        100% {
+            letter-spacing: 0px;
+            transform: rotateY(0);
+            padding: 1rem 3rem;
+        }
+    }
 }
