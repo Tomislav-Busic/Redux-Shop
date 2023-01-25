@@ -23,7 +23,7 @@ export const StripeBtn = ({ price }) => {
       name="TBWeb"
       billingAddress
       shippingAddress
-      image={logo}
+      image="https://github.com/Tomislav-Busic/Redux-Shop/blob/main/public/LogoMakr-1306Is.png"
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
