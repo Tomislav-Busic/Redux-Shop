@@ -6,6 +6,7 @@ import { cartSlice } from "./slice/cart-slice";
 import { favoriteSlice } from "./slice/favorite-slice";
 import { paginationSlice } from "./slice/pagination-slice";
 import { themeSlice } from "./slice/theme-slice";
+import { stripeSlice } from "./slice/stripe-slice";
 
 export const store = configureStore({
   reducer: {
@@ -16,5 +17,6 @@ export const store = configureStore({
     favorite: favoriteSlice.reducer,
     pagination: paginationSlice.reducer,
     theme: themeSlice.reducer,
+    stripe: stripeSlice.reducer,
   },
 });

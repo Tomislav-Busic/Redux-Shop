@@ -15,12 +15,15 @@ import { Cart } from "./components/Cart";
 import { Favorite } from "./components/Favorite";
 import { Footer } from "./components/Footer/Footer";
 import { AnimatedRoutes } from "./components/AnimatedRoutes/AnimatedRoutes";
+import { PaidModal } from "./components/PaidModal/PaidModal";
+import { OvrelayModal } from "./components/PaidModal/OvrelayModal";
 
 function App() {
   const categoryId = useSelector((state) => state.products.categoryId);
   const showAllProducts = useSelector((state) => state.products.showAll);
   const carItemsState = useSelector((state) => state.cart.cartList);
   const favItemsState = useSelector((state) => state.favorite.favList);
+  const paidModal = useSelector((state) => state.stripe.toggleModal);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -57,6 +60,12 @@ function App() {
       <Favorite />
       <Footer />
       <AnimatedRoutes />
+      {paidModal && (
+        <>
+          <PaidModal />
+          <OvrelayModal />
+        </>
+      )}
     </div>
   );
 }
