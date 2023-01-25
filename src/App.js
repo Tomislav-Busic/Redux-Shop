@@ -36,12 +36,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (carItemsState?.length === 0) return;
+    if (carItemsState?.length === 0) localStorage.removeItem("cartItems");
     localStorage.setItem("cartItems", JSON.stringify(carItemsState));
   }, [carItemsState]);
 
   useEffect(() => {
-    if (favItemsState?.length === 0) return;
+    if (favItemsState?.length === 0) localStorage.removeItem("cartItems");
     localStorage.setItem("favoriteItems", JSON.stringify(favItemsState));
   }, [favItemsState]);
 
