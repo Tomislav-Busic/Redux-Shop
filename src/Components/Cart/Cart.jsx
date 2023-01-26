@@ -10,9 +10,9 @@ import { StripeBtn } from "../StripeBtn/StripeBtn";
 
 export const Cart = () => {
   let total = 0;
+  const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.cart.isOpen);
   const cartItems = useSelector((state) => state.cart.cartList);
-  const dispatch = useDispatch();
   cartItems?.forEach((item) => (total += item.totalPrice));
 
   const handleToggle = () => {
