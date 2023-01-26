@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Stack } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FormatCurrency } from "../tools/formatCurrency";
-import { cartActions } from "../store/slice/cart-slice";
+import { FormatCurrency } from "../../tools/formatCurrency";
+import { cartActions } from "../../store/slice/cart-slice";
 import { useDispatch } from "react-redux";
 
 export const CartItem = ({ item }) => {

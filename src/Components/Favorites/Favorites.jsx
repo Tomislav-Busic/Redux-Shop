@@ -3,10 +3,10 @@ import { Offcanvas, Stack, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { favoriteActions } from "../store/slice/favorite-slice";
+import { favoriteActions } from "../../store/slice/favorite-slice";
 import { FavItems } from "./FavItems";
 
-export const Favorite = () => {
+export const Favorites = () => {
   const isOpen = useSelector((state) => state.favorite.showFavorite);
   const favItems = useSelector((state) => state.favorite.favList);
   const dispatch = useDispatch();

@@ -2,11 +2,11 @@ import React from "react";
 import { Offcanvas, Stack, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
-import { cartActions } from "../store/slice/cart-slice";
+import { cartActions } from "../../store/slice/cart-slice";
 import { CartItem } from "./CartItem";
 import { Link } from "react-router-dom";
-import { FormatCurrency } from "../tools/formatCurrency";
-import { StripeBtn } from "./StripeBtn/StripeBtn";
+import { FormatCurrency } from "../../tools/formatCurrency";
+import { StripeBtn } from "../StripeBtn/StripeBtn";
 
 export const Cart = () => {
   let total = 0;

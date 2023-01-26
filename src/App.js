@@ -11,8 +11,8 @@ import { cartActions } from "./store/slice/cart-slice";
 import { favoriteActions } from "./store/slice/favorite-slice";
 
 import { Header } from "./components/Header/Header";
-import { Cart } from "./components/Cart";
-import { Favorite } from "./components/Favorite";
+import { Cart } from "./components/Cart/Cart";
+import { Favorites } from "./components/Favorites/Favorites";
 import { Footer } from "./components/Footer/Footer";
 import { AnimatedRoutes } from "./components/AnimatedRoutes/AnimatedRoutes";
 import { PaidModal } from "./components/PaidModal/PaidModal";
@@ -57,7 +57,7 @@ function App() {
     <div className="app">
       <Header />
       <Cart />
-      <Favorite />
+      <Favorites />
       <Footer />
       <AnimatedRoutes />
       {paidModal && (

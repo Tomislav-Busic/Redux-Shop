@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Stack } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
-import { favoriteActions } from "../store/slice/favorite-slice";
+import { favoriteActions } from "../../store/slice/favorite-slice";
 import { Link } from "react-router-dom";
 
 export const FavItems = ({ item }) => {
