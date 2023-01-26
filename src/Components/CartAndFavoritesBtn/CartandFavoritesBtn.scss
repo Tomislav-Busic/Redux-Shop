@@ -2,7 +2,7 @@
 @import "../../styles/variables.scss";
 
 .header-controllers {
-    @include flex-center;
+    @include flex-center-column;
 
     .link-style {
         position: relative;

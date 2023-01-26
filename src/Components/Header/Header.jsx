@@ -1,13 +1,18 @@
 import React from "react";
-import "./Header.scss";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import { HeaderControllers } from "./HeaderControllers";
-import { useSelector } from "react-redux";
+import { CartandFavoritesBtn } from "../CartAndFavoritesBtn/CartandFavoritesBtn";
+import { themeAction } from "../../store/slice/theme-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 export const Header = () => {
+  const dispatch = useDispatch();
   const themeState = useSelector((state) => state.theme.themeState);
+
+  const changeTheme = () => {
+    dispatch(themeAction.changeTheme());
+  };
 
   return (
     <Navbar
@@ -24,7 +29,15 @@ export const Header = () => {
             Products
           </Nav.Link>
         </Nav>
-        <HeaderControllers />
+        <CartandFavoritesBtn />
+        <div className="form-check form-switch">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            role="switch"
+            onClick={changeTheme}
+          />
+        </div>
       </Container>
     </Navbar>
   );

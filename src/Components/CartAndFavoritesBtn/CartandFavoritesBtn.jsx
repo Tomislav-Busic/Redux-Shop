@@ -1,11 +1,11 @@
 import React from "react";
+import "./CartandFavoritesBtn.scss";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/slice/cart-slice";
 import { favoriteActions } from "../../store/slice/favorite-slice";
-import { themeAction } from "../../store/slice/theme-slice";
 
-export const HeaderControllers = () => {
+export const CartandFavoritesBtn = () => {
   const dispatch = useDispatch();
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
   const favQuantity = useSelector((state) => state.favorite.totalQuantity);
@@ -16,10 +16,6 @@ export const HeaderControllers = () => {
 
   const favOpen = () => {
     dispatch(favoriteActions.toggleFav());
-  };
-
-  const changeTheme = () => {
-    dispatch(themeAction.changeTheme());
   };
 
   return (
@@ -44,14 +40,6 @@ export const HeaderControllers = () => {
         </svg>
         <p className="fav">{favQuantity > 0 ? favQuantity : ""}</p>
       </Link>
-      <div className="form-check form-switch">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          role="switch"
-          onClick={changeTheme}
-        />
-      </div>
     </div>
   );
 };
