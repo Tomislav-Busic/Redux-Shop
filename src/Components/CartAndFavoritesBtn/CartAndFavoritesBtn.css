@@ -12,6 +12,10 @@
   right: 12rem;
   z-index: 1000;
 }
+.header-controllers.theme-btn-bg {
+  background-color: #93969d;
+  border: none;
+}
 .header-controllers .link-style {
   position: relative;
 }
@@ -19,6 +23,9 @@
   height: 1.7rem;
   fill: #333;
   margin-bottom: 1rem;
+}
+.header-controllers .link-style .link-svg-cart.theme-cart {
+  fill: rgb(245, 245, 245);
 }
 .header-controllers .link-style .link-svg-fav {
   height: 1.7rem;
@@ -36,6 +43,9 @@
   top: 48%;
   left: 50%;
   color: rgb(245, 245, 245);
+}
+.header-controllers .link-style p.theme-p {
+  color: #333;
 }
 .header-controllers .link-style .cart {
   top: 17%;

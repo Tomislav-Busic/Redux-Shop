@@ -12,6 +12,11 @@
     right: 12rem;
     z-index: 1000;
 
+    &.theme-btn-bg {
+        background-color: $footer-bg-light;
+        border: none;
+    }
+
     .link-style {
         position: relative;
 
@@ -19,6 +24,10 @@
             height: 1.7rem;
             fill: $cart-color;
             margin-bottom: 1rem;
+
+            &.theme-cart {
+                fill: $bg-color-whitesmoke;
+            }
         }
 
         .link-svg-fav {
@@ -38,6 +47,10 @@
             top: 48%;
             left: 50%;
             color: $bg-color-whitesmoke;
+
+            &.theme-p {
+                color: $cart-color;
+            }
         }
 
         .cart {
