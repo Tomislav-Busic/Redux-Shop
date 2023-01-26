@@ -1,0 +1,102 @@
+.header-controllers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgb(245, 245, 245);
+  padding: 1rem 0.5rem;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  top: 5rem;
+  right: 12rem;
+  z-index: 1000;
+}
+.header-controllers .link-style {
+  position: relative;
+}
+.header-controllers .link-style .link-svg-cart {
+  height: 1.7rem;
+  fill: #333;
+  margin-bottom: 1rem;
+}
+.header-controllers .link-style .link-svg-fav {
+  height: 1.7rem;
+  fill: crimson;
+}
+.header-controllers .link-style p {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #111;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 1px;
+  transform: translate(-50%, -50%);
+  top: 48%;
+  left: 50%;
+  color: rgb(245, 245, 245);
+}
+.header-controllers .link-style .cart {
+  top: 17%;
+  left: 55%;
+}
+.header-controllers .link-style .animate {
+  -webkit-animation: svg 3s linear infinite;
+          animation: svg 3s linear infinite;
+}
+@-webkit-keyframes svg {
+  0% {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  50% {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+}
+@keyframes svg {
+  0% {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  50% {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 1600px) {
+  .header-controllers {
+    right: 10rem;
+  }
+}
+@media (max-width: 1300px) {
+  .header-controllers {
+    right: 8rem;
+  }
+}
+@media (max-width: 1100px) {
+  .header-controllers {
+    right: 6rem;
+  }
+}
+@media (max-width: 900px) {
+  .header-controllers {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 700px) {
+  .header-controllers {
+    right: 0.5rem;
+  }
+}/*# sourceMappingURL=CartandFavoritesBtn.css.map */

@@ -13,6 +13,7 @@ import { favoriteActions } from "./store/slice/favorite-slice";
 import { Header } from "./components/Header/Header";
 import { Cart } from "./components/Cart/Cart";
 import { Favorites } from "./components/Favorites/Favorites";
+import { CartAndFavoritesBtn } from "./components/CartAndFavoritesBtn/CartAndFavoritesBtn";
 import { Footer } from "./components/Footer/Footer";
 import { AnimatedRoutes } from "./components/AnimatedRoutes/AnimatedRoutes";
 import { PaidModal } from "./components/PaidModal/PaidModal";
@@ -58,6 +59,7 @@ function App() {
       <Header />
       <Cart />
       <Favorites />
+      <CartAndFavoritesBtn />
       <Footer />
       <AnimatedRoutes />
       {paidModal && (
