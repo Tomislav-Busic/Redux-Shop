@@ -48,7 +48,7 @@ const Filters = () => {
           <ProductsMenu option={option} key={option.id} />
         ))}
       </div>
-      <InputGroup className="mb-3">
+      <InputGroup className="mb-3" style={{ width: "18rem" }}>
         <Form.Control
           aria-label="Default"
           aria-describedby="inputGroup-sizing-default"
@@ -57,7 +57,10 @@ const Filters = () => {
         />
       </InputGroup>
       <br />
-      <Form.Select onChange={(e) => handleSortByPrice(e.target.value)}>
+      <Form.Select
+        style={{ width: "18rem" }}
+        onChange={(e) => handleSortByPrice(e.target.value)}
+      >
         <option value="all">Filter by price</option>
         <option value="lower">Lower price</option>
         <option value="higher">Higher price</option>
