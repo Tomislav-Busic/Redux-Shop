@@ -1,12 +1,12 @@
 @import "../../styles/mixsins.scss";
 @import "../../styles/variables.scss";
+@import "../../styles/miksins-animations.scss";
 
 .header-controllers {
-    @include flex-center-column;
+    @include flex-center;
     position: fixed;
-    background-color: $bg-color-whitesmoke;
-    padding: 1rem 0.3rem;
-    border: 1px solid $footer-p-light;
+    background-color: $footer-bg-dark;
+    padding: 0.4rem;
     border-radius: 0.5rem;
     top: 5rem;
     right: 12rem;
@@ -14,7 +14,6 @@
 
     &.theme-btn-bg {
         background-color: $footer-bg-light;
-        border: none;
     }
 
     .link-style {
@@ -22,12 +21,8 @@
 
         .link-svg-cart {
             height: 1.7rem;
-            fill: $cart-color;
-            margin-bottom: 1rem;
-
-            &.theme-cart {
-                fill: $bg-color-whitesmoke;
-            }
+            fill: $bg-color-whitesmoke;
+            margin-right: 1rem;
         }
 
         .link-svg-fav {
@@ -45,41 +40,16 @@
             padding: 1px;
             transform: translate(-50%, -50%);
             top: 48%;
-            left: 50%;
-            color: $bg-color-whitesmoke;
-
-            &.theme {
-                color: $cart-color;
-            }
+            left: 44%;
+            color: $footer-bg-dark;
         }
 
         .cart {
-            top: 17%;
-            left: 55%;
+            top: 28%;
+            left: 40%;
         }
 
-
-
-        .animate {
-            animation: svg 3s linear infinite;
-        }
-
-        @keyframes svg {
-            0% {
-                transform: scale(1);
-                transition: all 0.3s ease-in-out;
-            }
-
-            50% {
-                transform: scale(1.2);
-                transition: all 0.3s ease-in-out;
-            }
-
-            100% {
-                transform: scale(1);
-                transition: all 0.3s ease-in-out;
-            }
-        }
+        @include animate-card-fav-btn;
     }
 }
 
