@@ -1,11 +1,12 @@
 @import "../../styles/mixsins.scss";
+@import "../../styles/mixins-animations.scss";
 
 .heading {
     @include heading;
 }
 
 .heading-theme {
-    @include heading-theme
+    @include heading-theme;
 }
 .cards {
     @include cards;
