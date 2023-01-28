@@ -1,6 +1,6 @@
 .heading {
   border-radius: 1rem;
-  margin-top: 1rem;
+  margin: 3rem 0 3rem 0;
   padding: 0.5rem 1rem;
   color: rgb(245, 245, 245);
   position: relative;
@@ -131,7 +131,7 @@
 
 .heading-theme {
   border-radius: 1rem;
-  margin-top: 1rem;
+  margin: 3rem 0 3rem 0;
   padding: 0.5rem 1rem;
   color: #444;
   position: relative;

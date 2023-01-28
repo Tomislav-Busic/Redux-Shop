@@ -23,16 +23,16 @@
 
 .active {
   background-color: rgb(245, 245, 245);
-  color: #332d2d;
+  color: #2b2727;
   box-shadow: 5px 5px 10px #93969d;
 }
 
 .theme {
-  color: #332d2d;
+  color: #2b2727;
 }
 
 .active-theme {
-  background-color: #332d2d;
+  background-color: #2b2727;
   color: rgb(245, 245, 245);
-  box-shadow: 5px 5px 10px #332d2d;
+  box-shadow: 5px 5px 10px #2b2727;
 }/*# sourceMappingURL=Filters.css.map */

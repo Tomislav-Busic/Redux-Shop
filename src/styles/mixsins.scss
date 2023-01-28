@@ -31,12 +31,15 @@
 
 @mixin heading {
     border-radius: 1rem;
-    margin: 3rem 0 3rem 0;
+    margin: 5rem 0 3rem 0;
     padding: 0.5rem 1rem;
     color: $bg-color-whitesmoke;
     position: relative;
     text-align: center;
 
+    @media (max-width: "900px") {
+            margin: 4rem 0 1rem 0;
+        }
     &:before {
         content: "";
         position: absolute;

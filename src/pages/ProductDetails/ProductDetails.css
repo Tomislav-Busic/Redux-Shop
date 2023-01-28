@@ -1,9 +1,9 @@
 .heading-price {
-  color: #332d2d;
+  color: #2b2727;
 }
 
 .price {
-  background-color: #332d2d;
+  background-color: #2b2727;
   color: rgb(245, 245, 245);
   padding: 0 1rem;
   border-radius: 0.5rem;
@@ -11,9 +11,9 @@
 
 .price-theme {
   background-color: rgba(255, 215, 0, 0.7);
-  color: #332d2d;
+  color: #2b2727;
 }
 .price-theme .description {
-  color: #332d2d;
+  color: #2b2727;
   font-size: 1.1rem;
 }/*# sourceMappingURL=ProductDetails.css.map */

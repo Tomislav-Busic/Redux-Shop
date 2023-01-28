@@ -2,11 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   position: fixed;
-  background-color: rgb(245, 245, 245);
-  padding: 1rem 0.3rem;
-  border: 1px solid #444;
+  background-color: #2b2727;
+  padding: 0.4rem;
   border-radius: 0.5rem;
   top: 5rem;
   right: 12rem;
@@ -14,18 +12,14 @@
 }
 .header-controllers.theme-btn-bg {
   background-color: #93969d;
-  border: none;
 }
 .header-controllers .link-style {
   position: relative;
 }
 .header-controllers .link-style .link-svg-cart {
   height: 1.7rem;
-  fill: #333;
-  margin-bottom: 1rem;
-}
-.header-controllers .link-style .link-svg-cart.theme-cart {
   fill: rgb(245, 245, 245);
+  margin-right: 1rem;
 }
 .header-controllers .link-style .link-svg-fav {
   height: 1.7rem;
@@ -41,15 +35,12 @@
   padding: 1px;
   transform: translate(-50%, -50%);
   top: 48%;
-  left: 50%;
-  color: rgb(245, 245, 245);
-}
-.header-controllers .link-style p.theme {
-  color: #333;
+  left: 46%;
+  color: #2b2727;
 }
 .header-controllers .link-style .cart {
-  top: 17%;
-  left: 55%;
+  top: 28%;
+  left: 40%;
 }
 .header-controllers .link-style .animate {
   -webkit-animation: svg 3s linear infinite;
@@ -109,4 +100,4 @@
   .header-controllers {
     right: 0.5rem;
   }
-}/*# sourceMappingURL=CartandFavoritesBtn.css.map */
+}/*# sourceMappingURL=CartAndFavoritesBtn.css.map */
