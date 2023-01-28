@@ -35,4 +35,33 @@
   background-color: #2b2727;
   color: rgb(245, 245, 245);
   box-shadow: 5px 5px 10px #2b2727;
+}
+
+.filters {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.filters .btn-menu {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.filters .input-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .filters .input-form-container {
+    flex-wrap: wrap;
+  }
+}
+.filters .input-form-container .inp-for {
+  width: 18rem;
+  margin: 1rem;
 }/*# sourceMappingURL=Filters.css.map */

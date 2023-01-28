@@ -16,3 +16,27 @@
 .active-theme {
     @include header-active-theme;
 }
+
+.filters {
+    padding: 1rem;
+    @include flex-center-column;
+
+    .btn-menu {
+        padding: 1rem;
+        @include flex-center;
+        flex-wrap: wrap;
+    }
+
+    .input-form-container {
+        @include flex-center;
+
+        @media (max-width: "900px") {
+            flex-wrap: wrap;
+        }
+
+        .inp-for {
+            width: 18rem;
+            margin: 1rem;
+        }
+    }
+}

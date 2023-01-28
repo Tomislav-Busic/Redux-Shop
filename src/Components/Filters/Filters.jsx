@@ -1,6 +1,7 @@
 import React from "react";
-import { Form, InputGroup, Button } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Filters.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { productsActions } from "../../store/slice/products-slice";
 import { paginationActions } from "../../store/slice/pagination-slice";
@@ -29,7 +30,7 @@ const Filters = () => {
 
   return (
     <div className="filters">
-      <div className="cards">
+      <div className="btn-menu">
         <p
           onClick={showAllProducts}
           className={`category ${
@@ -48,23 +49,24 @@ const Filters = () => {
           <ProductsMenu option={option} key={option.id} />
         ))}
       </div>
-      <InputGroup className="mb-3" style={{ width: "18rem" }}>
-        <Form.Control
-          aria-label="Default"
-          aria-describedby="inputGroup-sizing-default"
-          placeholder="Search by Name"
-          onChange={(e) => handleSearchByName(e.target.value)}
-        />
-      </InputGroup>
-      <br />
-      <Form.Select
-        style={{ width: "18rem" }}
-        onChange={(e) => handleSortByPrice(e.target.value)}
-      >
-        <option value="all">Filter by price</option>
-        <option value="lower">Lower price</option>
-        <option value="higher">Higher price</option>
-      </Form.Select>
+      <div className="input-form-container">
+        <InputGroup className="inp-for">
+          <Form.Control
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="Search by Name"
+            onChange={(e) => handleSearchByName(e.target.value)}
+          />
+        </InputGroup>
+        <Form.Select
+          className="inp-for"
+          onChange={(e) => handleSortByPrice(e.target.value)}
+        >
+          <option value="all">Filter by price</option>
+          <option value="lower">Lower price</option>
+          <option value="higher">Higher price</option>
+        </Form.Select>
+      </div>
     </div>
   );
 };
