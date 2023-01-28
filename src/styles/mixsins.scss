@@ -11,6 +11,11 @@
     flex-direction: column;
 }
 
+@mixin cards {
+    padding: 1rem;
+    @include flex-center;
+    flex-wrap: wrap;
+}
 @mixin theme-background {
     background: #F0F2F0;
     /* fallback for old browsers */

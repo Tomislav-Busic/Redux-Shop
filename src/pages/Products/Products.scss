@@ -7,3 +7,6 @@
 .heading-theme {
     @include heading-theme
 }
+.cards {
+    @include cards;
+}
