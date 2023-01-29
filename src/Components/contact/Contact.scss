@@ -25,6 +25,22 @@
                 fill: $footer-p-light;
             }
 
+            .location-svg {
+                height: 1.4rem;
+                padding: 4px 7px;
+                border-radius: 2px;
+                fill: $bg-color-whitesmoke;
+                background-color: $footer-p-light;
+            }
+
+            img {
+                padding: 5px 3px;
+                border-radius: 4px;
+                height: 1.5rem;
+                width: 1.6rem;
+                background-color: $footer-p-light;
+            }
+
             .contact-item-link {
                 text-decoration: none;
                 margin: auto;

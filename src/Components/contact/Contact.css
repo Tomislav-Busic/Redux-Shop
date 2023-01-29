@@ -24,6 +24,20 @@
   padding-bottom: 0;
   fill: #444;
 }
+.contact-container .contact-links .contact-item .location-svg {
+  height: 1.4rem;
+  padding: 4px 7px;
+  border-radius: 2px;
+  fill: rgb(245, 245, 245);
+  background-color: #444;
+}
+.contact-container .contact-links .contact-item img {
+  padding: 5px 3px;
+  border-radius: 4px;
+  height: 1.5rem;
+  width: 1.6rem;
+  background-color: #444;
+}
 .contact-container .contact-links .contact-item .contact-item-link {
   text-decoration: none;
   margin: auto;
