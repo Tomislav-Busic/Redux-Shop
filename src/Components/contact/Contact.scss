@@ -4,17 +4,16 @@
 
 
 .contact-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    @include flex-center;
+    flex-wrap: wrap;
+    padding: 4rem;
 
-    .social-links {
-        width: 50%;
-        padding: 4rem;
+    .contact-links {
+        padding: 1rem;
+        margin: 1rem;
         @include flex-center-column;
-        flex-wrap: wrap;
 
-        .social-item {
+        .contact-item {
             display: flex;
             justify-content: space-between;
             width: 250px;
@@ -26,7 +25,7 @@
                 fill: $footer-p-light;
             }
 
-            .social-item-link {
+            .contact-item-link {
                 text-decoration: none;
                 margin: auto;
                 font-size: 1.2rem;
@@ -39,11 +38,5 @@
                 }
             }
         }
-    }
-
-    .contact-links {
-        width: 50%;
-        padding: 4rem;
-        @include flex-center-column;
     }
 }
