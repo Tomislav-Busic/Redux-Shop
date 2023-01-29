@@ -1,3 +1,22 @@
 @import "../../styles/mixsins.scss";
 @import "../../styles/variables.scss";
 @import "../../styles/mixins-animations.scss";
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .social {
+        width: 50%;
+        height: 4rem;
+        background-color: red;
+    }
+
+    .contact-links {
+        width: 50%;
+        height: 4rem;
+        background-color: black;
+    }
+}

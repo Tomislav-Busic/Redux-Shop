@@ -1,1 +1,15 @@
-/*# sourceMappingURL=Contact.css.map */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.contact-container .social {
+  width: 50%;
+  height: 4rem;
+  background-color: red;
+}
+.contact-container .contact-links {
+  width: 50%;
+  height: 4rem;
+  background-color: black;
+}/*# sourceMappingURL=Contact.css.map */

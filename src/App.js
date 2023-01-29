@@ -18,6 +18,7 @@ import { Footer } from "./components/Footer/Footer";
 import { AnimatedRoutes } from "./components/AnimatedRoutes/AnimatedRoutes";
 import { PaidModal } from "./components/PaidModal/PaidModal";
 import { OvrelayModal } from "./components/PaidModal/OvrelayModal";
+import { Contact } from "./components/contact/Contact";
 
 function App() {
   const categoryId = useSelector((state) => state.products.categoryId);
@@ -62,6 +63,7 @@ function App() {
       <CartAndFavoritesBtn />
       <Footer />
       <AnimatedRoutes />
+      <Contact />
       {paidModal && (
         <>
           <PaidModal />
