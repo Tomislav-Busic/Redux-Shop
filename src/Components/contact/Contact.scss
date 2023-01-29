@@ -3,54 +3,63 @@
 @import "../../styles/mixins-animations.scss";
 
 
-.contact-container {
-    @include flex-center;
-    flex-wrap: wrap;
-    padding: 4rem;
+.contact-component {
+    @include flex-center-column;
+    background-color: $bg-end;
 
-    .contact-links {
-        padding: 1rem;
-        margin: 1rem;
-        @include flex-center-column;
+    .heading-contact {
+        @include heading-theme;
+    }
 
-        .contact-item {
-            display: flex;
-            justify-content: space-between;
-            width: 250px;
-            padding: 0.2rem 1rem;
+    .contact-container {
+        @include flex-center;
+        flex-wrap: wrap;
+        padding: 2rem 0rem 8rem 0rem;
 
-            svg {
-                height: 1.8rem;
-                padding-bottom: 0;
-                fill: $footer-p-light;
-            }
+        .contact-links {
+            padding: 1rem;
+            margin: 1rem;
+            @include flex-center-column;
 
-            .location-svg {
-                height: 1.4rem;
-                padding: 4px 7px;
-                border-radius: 2px;
-                fill: $bg-color-whitesmoke;
-                background-color: $footer-p-light;
-            }
+            .contact-item {
+                display: flex;
+                justify-content: space-between;
+                width: 250px;
+                padding: 0.2rem 1rem;
 
-            img {
-                padding: 5px 3px;
-                border-radius: 4px;
-                height: 1.5rem;
-                width: 1.6rem;
-                background-color: $footer-p-light;
-            }
+                svg {
+                    height: 1.8rem;
+                    padding-bottom: 0;
+                    fill: $footer-p-light;
+                }
 
-            .contact-item-link {
-                text-decoration: none;
-                margin: auto;
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: $footer-p-light;
-                transition: all 0.5s ease-in-out;
+                .location-svg {
+                    height: 1.4rem;
+                    padding: 4px 7px;
+                    border-radius: 2px;
+                    fill: $bg-color-whitesmoke;
+                    background-color: $footer-p-light;
+                }
 
-                &:hover {
-                    letter-spacing: 4px;
+                img {
+                    padding: 5px 3px;
+                    border-radius: 4px;
+                    height: 1.5rem;
+                    width: 1.6rem;
+                    background-color: $footer-p-light;
+                }
+
+                .contact-item-link {
+                    text-decoration: none;
+                    margin: auto;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: $footer-p-light;
+                    transition: all 0.5s ease-in-out;
+
+                    &:hover {
+                        letter-spacing: 4px;
+                    }
                 }
             }
         }
