@@ -7,6 +7,10 @@
     @include flex-center-column;
     background-color: $bg-end;
 
+    &.theme-contact-page {
+        @include theme-background-change;
+    }
+
     .heading-contact {
         @include heading-theme;
     }

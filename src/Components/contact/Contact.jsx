@@ -2,10 +2,12 @@ import React from "react";
 import "./Contact.scss";
 import { Link } from "react-router-dom";
 import logo from "../../logo/LogoMakr-1306Is.png";
+import { useSelector } from "react-redux";
 
 export const Contact = () => {
+  const theme = useSelector((state) => state.theme.themeState);
   return (
-    <div className="contact-component">
+    <div className={`contact-component  ${theme && "theme-contact-page"}`}>
       <h1 className="heading-contact">Contact</h1>
       <div className="contact-container">
         <div className="contact-links">
