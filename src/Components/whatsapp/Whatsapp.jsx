@@ -1,6 +1,7 @@
 import React from "react";
 import WhatsAppWidget from "react-whatsapp-chat-widget";
 import "react-whatsapp-chat-widget/index.css";
+import logo from "../../logo/LogoMakr-1306Is.png";
 
 export const Whatsapp = () => {
   return (
@@ -12,15 +13,15 @@ export const Whatsapp = () => {
       autoOpen={true}
       autoOpenTimer={5000}
       messageBox={true}
-      messageBoxTxt="Hi Team, is there any related service available ?"
+      messageBoxTxt=""
       iconSize="40"
       iconColor="white"
       iconBgColor="green"
-      headerIcon="https://proficientdesigners.in/wp-content/themes/pd/img/logo-new.png"
+      headerIcon={logo}
       headerIconColor="pink"
       headerTxtColor="black"
       headerBgColor="green"
-      headerTitle="John Doe"
+      headerTitle="Tomilsav Bušić"
       headerCaption="Online"
       bodyBgColor="#bbb"
       chatPersonName="Support"
