@@ -5,7 +5,7 @@ import "react-whatsapp-chat-widget/index.css";
 export const Whatsapp = () => {
   return (
     <WhatsAppWidget
-      phoneNo="919884098840"
+      phoneNo="+385922668230"
       position="right"
       widgetWidth="300px"
       widgetWidthMobile="260px"
@@ -15,11 +15,11 @@ export const Whatsapp = () => {
       messageBoxTxt="Hi Team, is there any related service available ?"
       iconSize="40"
       iconColor="white"
-      iconBgColor="tomato"
+      iconBgColor="green"
       headerIcon="https://proficientdesigners.in/wp-content/themes/pd/img/logo-new.png"
       headerIconColor="pink"
       headerTxtColor="black"
-      headerBgColor="tomato"
+      headerBgColor="green"
       headerTitle="John Doe"
       headerCaption="Online"
       bodyBgColor="#bbb"
