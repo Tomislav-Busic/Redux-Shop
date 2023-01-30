@@ -28,8 +28,12 @@
             .contact-item {
                 display: flex;
                 justify-content: space-between;
-                width: 250px;
+                width: 400px;
                 padding: 0.2rem 1rem;
+
+                @media (max-width: "700px") {
+                    width: 300px;
+                }
 
                 svg {
                     height: 1.8rem;
@@ -56,13 +60,17 @@
                 .contact-item-link {
                     text-decoration: none;
                     margin: auto;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     font-weight: bold;
                     color: $footer-p-light;
                     transition: all 0.5s ease-in-out;
 
                     &:hover {
                         letter-spacing: 4px;
+
+                        @media (max-width: "700px") {
+                            letter-spacing: 0;
+                        }
                     }
                 }
             }
