@@ -11,7 +11,7 @@ export const stripeSlice = createSlice({
       state.stripeData = action.payload;
       state.toggleModal = !state.toggleModal;
     },
-    closeModal(state, action) {
+    closeModal(state) {
       state.toggleModal = !state.toggleModal;
     },
   },

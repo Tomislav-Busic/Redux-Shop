@@ -8,7 +8,7 @@ export const usePagination = () => {
   );
   const dispatch = useDispatch();
 
-  const indexOfLastPage = page + productsPerPage;
+  const indexOfLastPage = page * productsPerPage;
   const indexOfFirstPage = indexOfLastPage - productsPerPage;
   const onShowSizeChange = (current, pageSize) => {
     dispatch(paginationActions.setProductsPerPage(pageSize));
